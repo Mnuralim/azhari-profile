@@ -3,6 +3,7 @@ import { HomePage } from "./home";
 import About from "./about";
 import Gallery from "./gallery";
 import Contact from "./contact";
+import Theme from "./theme";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <About />
       <Gallery />
       <Contact />
+      <Theme />
     </main>
   );
 }
