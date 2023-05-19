@@ -13,13 +13,13 @@ const About = () => {
           <img src={"/img/about1.png"} className="mx-auto my-auto mt-5" />
         </motion.div>
         <motion.div variants={slideIn("right", "tween", 0.5, 1.5)} initial="hidden" whileInView="show" className="mt-10 text-center md:text-left">
-          <h1 className="text-4xl font-bold text-slate-700 lg:text-6xl">
+          <h1 className="text-4xl font-bold text-slate-700 lg:text-6xl dark:text-slate-50">
             Tentang <span className="text-indigo-500">Saya</span>
           </h1>
-          <p className="mt-3 mb-5 text-lg text-slate-500 md:w-96 lg:w-80">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime atque aut esse totam nostrum, dolor commodi quos non cumque iure.</p>
+          <p className="mt-3 mb-5 text-lg text-slate-500 md:w-96 lg:w-80 dark:text-slate-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime atque aut esse totam nostrum, dolor commodi quos non cumque iure.</p>
           <div>
             <Link href={"#"} className="px-4 py-3 text-white bg-indigo-500 rounded ">
-              <SendOutlinedIcon />
+              <SendOutlinedIcon className="pr-2" />
               Hubungi Saya
             </Link>
           </div>

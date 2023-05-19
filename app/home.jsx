@@ -13,11 +13,11 @@ export const HomePage = () => {
           <img src={"/img/azhari.png"} className="mt-5 -mb-10" />
         </motion.div>
         <motion.div variants={slideIn("left", "tween", 0.5, 1.5)} initial="hidden" whileInView="show" className="mt-10 text-center md:mt-0 md:text-left">
-          <h1 className="text-4xl font-bold text-slate-700 lg:text-6xl">
+          <h1 className="text-4xl font-bold text-slate-700 lg:text-6xl dark:text-slate-50 ">
             Hai,saya <span className="text-indigo-500">Azhari</span>
           </h1>
-          <h2 className="mt-4 text-xl font-medium text-slate-600">Demisioner Rektor USN Kolaka</h2>
-          <p className="mt-3 mb-5 text-lg text-slate-500 lg:w-96">"Mari kita desain pondasi dan pembangunan identitas masa kini dan masa depan jangka panjang Buton Tengah!"</p>
+          <h2 className="mt-4 text-xl font-medium text-slate-600 dark:text-slate-400">Demisioner Rektor USN Kolaka</h2>
+          <p className="mt-3 mb-5 text-lg text-slate-500 lg:w-96 dark:text-slate-50">"Mari kita desain pondasi dan pembangunan identitas masa kini dan masa depan jangka panjang Buton Tengah!"</p>
           <div>
             <Link href={"#"} className="px-4 py-3 text-white bg-indigo-500 rounded ">
               <SendOutlinedIcon className="mr-2" />

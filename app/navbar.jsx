@@ -8,10 +8,23 @@ import CollectionsOutlinedIcon from "@mui/icons-material/CollectionsOutlined";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
-import { navVariants } from "@/utils/motion";
+import { navVariants, slideIn } from "@/utils/motion";
 
 const Navbar = () => {
   const [screenSize, setScreenSize] = useState(0);
+  const [dark, setDark] = useState(true);
+
+  const togleDark = () => {
+    setDark(!dark);
+  };
+
+  useEffect(() => {
+    if (dark == false) {
+      document.body.className = "light";
+    } else {
+      document.body.className = "dark";
+    }
+  });
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -29,63 +42,68 @@ const Navbar = () => {
     }
   }, []);
   return screenSize >= 1024 ? (
-    <motion.nav variants={navVariants} initial="hidden" whileInView="show" className="fixed top-0 z-[100] flex h-14  min-w-full justify-center bg-white/50 backdrop-blur-lg sm:px-28 ">
-      <div className="container flex items-center justify-between ">
+    <motion.nav variants={navVariants} initial="hidden" whileInView="show" className="fixed top-0 z-[100] flex h-14  min-w-full justify-center bg-white/50 backdrop-blur-lg sm:px-28 dark:bg-slate-800/50">
+      <div className="container flex items-center justify-between dark:text-slate-50">
         <div>
           <Link spy={true} smooth={true} offset={50} duration={500} to="home" className="text-indigo-500 cursor-pointer">
             Azhari
           </Link>
         </div>
-        <div className="flex gap-4">
+        <div className="flex gap-4 ">
           <div>
-            <Link spy={true} smooth={true} offset={50} duration={500} to="home" className="cursor-pointer text-slate-500">
+            <Link spy={true} smooth={true} offset={50} duration={500} to="home" className="cursor-pointer text-slate-500 dark:text-slate-50">
               Beranda
             </Link>
           </div>
           <div>
-            <Link spy={true} smooth={true} offset={50} duration={500} to="about" className="cursor-pointer text-slate-500">
+            <Link spy={true} smooth={true} offset={50} duration={500} to="about" className="cursor-pointer text-slate-500 dark:text-slate-50">
               Tentang
             </Link>
           </div>
           <div>
-            <Link to="" className="text-slate-500">
+            <Link to="" className="text-slate-500 dark:text-slate-50">
               Pencapaian
             </Link>
           </div>
           <div>
-            <Link spy={true} smooth={true} offset={50} duration={500} to="gallery" className="cursor-pointer text-slate-500">
+            <Link spy={true} smooth={true} offset={50} duration={500} to="gallery" className="cursor-pointer text-slate-500 dark:text-slate-50">
               Galeri
             </Link>
           </div>
           <div>
-            <Link spy={true} smooth={true} offset={50} duration={500} to="contact" className="cursor-pointer text-slate-500">
+            <Link spy={true} smooth={true} offset={50} duration={500} to="contact" className="cursor-pointer text-slate-500 dark:text-slate-50">
               Kontak
             </Link>
           </div>
         </div>
       </div>
       <div className="absolute text-2xl text-indigo-500 right-10 top-3">
-        <button>
+        <button onClick={togleDark}>
           <DarkModeOutlinedIcon />
         </button>
       </div>
     </motion.nav>
   ) : (
-    <motion.nav variants={navVariants} initial="hidden" whileInView="show" className="fixed inset-x-0 bottom-6 z-[100] mx-auto flex h-16 w-4/5 items-center justify-evenly rounded-2xl bg-white/40 text-lg backdrop-blur-md">
+    <motion.nav
+      variants={slideIn("up", "tween", 0.1, 0.3)}
+      initial="hidden"
+      whileInView="show"
+      className="fixed inset-x-0 bottom-6 z-[100] mx-auto flex h-16 w-4/5 items-center justify-evenly rounded-2xl bg-white/40 text-lg backdrop-blur-md dark:bg-slate-900/50 "
+    >
       <Link spy={true} smooth={true} offset={50} duration={500} to="home">
-        <HomeOutlinedIcon className="cursor-pointer text-black/75" />
+        <HomeOutlinedIcon className="cursor-pointer text-black/75 dark:text-slate-50" />
       </Link>
       <Link spy={true} smooth={true} offset={50} duration={500} to="about">
-        <PersonOutlineOutlinedIcon className="cursor-pointer text-black/75" />
+        <PersonOutlineOutlinedIcon className="cursor-pointer text-black/75 dark:text-slate-50" />
       </Link>
       <Link spy={true} smooth={true} offset={50} duration={500} to="home">
-        <EmojiEventsOutlinedIcon className="cursor-pointer text-black/75" />
+        <EmojiEventsOutlinedIcon className="cursor-pointer text-black/75 dark:text-slate-50" />
       </Link>
       <Link spy={true} smooth={true} offset={50} duration={500} to="gallery">
-        <CollectionsOutlinedIcon className="cursor-pointer text-black/75" />
+        <CollectionsOutlinedIcon className="cursor-pointer text-black/75 dark:text-slate-50" />
       </Link>
       <Link spy={true} smooth={true} offset={50} duration={500} to="contact">
-        <CallOutlinedIcon className="cursor-pointer text-black/75" />
+        <CallOutlinedIcon className="cursor-pointer text-black/75 dark:text-slate-50" />
       </Link>
     </motion.nav>
   );

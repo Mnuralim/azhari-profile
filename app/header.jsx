@@ -4,6 +4,7 @@ import Navbar from "./navbar";
 
 const Header = () => {
   const [navbarVisible, setNavbarVisible] = useState(true);
+  const [screenSize, setScreenSize] = useState(0);
 
   useEffect(() => {
     let timeout;
@@ -25,9 +26,25 @@ const Header = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setScreenSize(window.innerWidth);
+
+      const handleResize = () => {
+        setScreenSize(window.innerWidth);
+      };
+
+      window.addEventListener("resize", handleResize);
+
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }
+  }, []);
   return (
     <>
-      <header>{navbarVisible ? <Navbar /> : ""}</header>
+      <header>{navbarVisible || screenSize >= 1024 ? <Navbar /> : ""}</header>
     </>
   );
 };
