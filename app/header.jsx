@@ -15,7 +15,7 @@ const Header = () => {
 
       timeout = setTimeout(() => {
         setNavbarVisible(true);
-      }, 200);
+      }, 50);
     };
 
     window.addEventListener("scroll", handleScroll);

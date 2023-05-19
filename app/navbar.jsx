@@ -71,7 +71,7 @@ const Navbar = () => {
       </div>
     </motion.nav>
   ) : (
-    <nav className="fixed bottom-6 left-1/2 z-[100] my-auto flex h-16 w-4/5 -translate-y-1/2 -translate-x-1/2  items-center justify-evenly rounded-2xl bg-white/40 text-lg backdrop-blur-md ">
+    <motion.nav variants={navVariants} initial="hidden" whileInView="show" className="fixed inset-x-0 bottom-6 z-[100] mx-auto flex h-16 w-4/5 items-center justify-evenly rounded-2xl bg-white/40 text-lg backdrop-blur-md">
       <Link spy={true} smooth={true} offset={50} duration={500} to="home">
         <HomeOutlinedIcon className="cursor-pointer text-black/75" />
       </Link>
@@ -87,7 +87,7 @@ const Navbar = () => {
       <Link spy={true} smooth={true} offset={50} duration={500} to="contact">
         <CallOutlinedIcon className="cursor-pointer text-black/75" />
       </Link>
-    </nav>
+    </motion.nav>
   );
 };
 
