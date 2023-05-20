@@ -14,7 +14,7 @@ const About = () => {
         </motion.div>
         <motion.div variants={slideIn("right", "tween", 0.5, 1.5)} initial="hidden" whileInView="show" className="mt-10 text-center md:text-left">
           <h1 className="text-4xl font-bold text-slate-700 lg:text-6xl dark:text-slate-50">
-            Tentang <span className="text-indigo-500">Saya</span>
+            Tentang <span className="text-indigo-500">Azhari</span>
           </h1>
           <p className="mt-3 mb-5 text-lg text-slate-500 md:w-96 lg:w-80 dark:text-slate-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime atque aut esse totam nostrum, dolor commodi quos non cumque iure.</p>
           <div>
