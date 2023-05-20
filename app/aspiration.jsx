@@ -7,11 +7,11 @@ import SendOutlinedIcon from "@mui/icons-material/SendOutlined";
 import { motion } from "framer-motion";
 import { slideIn } from "@/utils/motion";
 
-const Contact = () => {
+const Aspiration = () => {
   return (
     <section className="relative mt-32 mb-20" id="contact">
       <h1 className="text-4xl font-bold text-center lg:text-6xl">
-        Hubungi <span className="text-indigo-500">Saya</span>
+        Aspirasi <span className="text-indigo-500">Kamu</span>
       </h1>
       <div className="flex flex-col items-center justify-center mt-10 lg:flex-row lg:gap-10">
         <motion.div variants={slideIn("left", "tween", 0.5, 1)} initial="hidden" whileInView="show" className="flex flex-col items-center justify-center w-11/12 p-10 bg-white shadow-md rounded-xl lg:w-2/6 dark:bg-slate-700">
@@ -54,14 +54,14 @@ const Contact = () => {
               <input className="block w-full px-2 py-1 mt-2 text-sm rounded-md outline-none bg-slate-100 md:text-base dark:bg-slate-500" type="text" placeholder="Nama" />
             </div>
             <div className="w-full">
-              <label className="text-slate-500 md:text-lg dark:text-slate-200" htmlFor="email">
-                Email :
+              <label className="text-slate-500 md:text-lg dark:text-slate-200" htmlFor="alamat">
+                Alamat :
               </label>
-              <input className="block w-full px-2 py-1 mt-2 text-sm rounded-md outline-none bg-slate-100 md:text-base dark:bg-slate-500" type="email" placeholder="email" />
+              <input className="block w-full px-2 py-1 mt-2 text-sm rounded-md outline-none bg-slate-100 md:text-base dark:bg-slate-500" type="text" placeholder="Alamat" />
             </div>
             <div className="w-full">
               <label className="text-slate-500 md:text-lg dark:text-slate-200" htmlFor="message">
-                Pesan :
+                Aspirasi :
               </label>
               <textarea name="message" id="message" rows="4" placeholder="Pesanmu..." className="block w-full px-2 py-1 mt-2 text-sm rounded-md outline-none resize-none bg-slate-100 md:text-base dark:bg-slate-500"></textarea>
             </div>
@@ -78,4 +78,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Aspiration;

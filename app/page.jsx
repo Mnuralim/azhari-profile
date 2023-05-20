@@ -1,9 +1,10 @@
 import Image from "next/image";
 import { HomePage } from "./home";
 import About from "./about";
-import Gallery from "./gallery";
-import Contact from "./contact";
+import Narasi from "./narasi";
+import Aspiration from "./aspiration";
 import Theme from "./theme";
+import Gallery from "./gallery";
 
 export default function Home() {
   return (
@@ -15,8 +16,9 @@ export default function Home() {
       </section>
       <HomePage />
       <About />
+      <Narasi />
       <Gallery />
-      <Contact />
+      <Aspiration />
       <Theme />
     </main>
   );

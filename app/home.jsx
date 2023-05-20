@@ -18,12 +18,12 @@ export const HomePage = () => {
           </h1>
           <h2 className="mt-4 text-xl font-medium text-slate-600 dark:text-slate-400">Demisioner Rektor USN Kolaka</h2>
           <p className="mt-3 mb-5 text-lg text-slate-500 lg:w-96 dark:text-slate-50">"Mari kita desain pondasi dan pembangunan identitas masa kini dan masa depan jangka panjang Buton Tengah!"</p>
-          <div>
+          {/* <div>
             <Link href={"#"} className="px-4 py-3 text-white bg-indigo-500 rounded ">
               <SendOutlinedIcon className="mr-2" />
               Hubungi Saya
             </Link>
-          </div>
+          </div> */}
         </motion.div>
       </div>
     </section>
