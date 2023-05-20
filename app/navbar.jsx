@@ -1,30 +1,19 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, createContext } from "react";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 import CallOutlinedIcon from "@mui/icons-material/CallOutlined";
 import EmojiEventsOutlinedIcon from "@mui/icons-material/EmojiEventsOutlined";
 import CollectionsOutlinedIcon from "@mui/icons-material/CollectionsOutlined";
-import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 import { navVariants, slideIn } from "@/utils/motion";
+import ButtonDark from "./buttonDark";
+
+export const DarkModeContext = createContext();
 
 const Navbar = () => {
   const [screenSize, setScreenSize] = useState(0);
-  const [dark, setDark] = useState(true);
-
-  const togleDark = () => {
-    setDark(!dark);
-  };
-
-  useEffect(() => {
-    if (dark == false) {
-      document.body.className = "light";
-    } else {
-      document.body.className = "dark";
-    }
-  });
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -41,6 +30,7 @@ const Navbar = () => {
       };
     }
   }, []);
+
   return screenSize >= 1024 ? (
     <motion.nav variants={navVariants} initial="hidden" whileInView="show" className="fixed top-0 z-[100] flex h-14  min-w-full justify-center bg-white/50 backdrop-blur-lg sm:px-28 dark:bg-slate-800/50">
       <div className="container flex items-center justify-between dark:text-slate-50">
@@ -78,9 +68,7 @@ const Navbar = () => {
         </div>
       </div>
       <div className="absolute text-2xl text-indigo-500 right-10 top-3">
-        <button onClick={togleDark}>
-          <DarkModeOutlinedIcon />
-        </button>
+        <ButtonDark />
       </div>
     </motion.nav>
   ) : (
