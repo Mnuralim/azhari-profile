@@ -60,6 +60,12 @@ const Navbar = () => {
               Narasi
             </Link>
           </div>
+
+          <div>
+            <Link spy={true} smooth={true} offset={50} duration={500} to="gallery" className="cursor-pointer text-slate-500 dark:text-slate-50">
+              Galeri
+            </Link>
+          </div>
           <div>
             <Link spy={true} smooth={true} offset={50} duration={500} to="contact" className="cursor-pointer text-slate-500 dark:text-slate-50">
               Aspirasi
@@ -84,10 +90,10 @@ const Navbar = () => {
       <Link spy={true} smooth={true} offset={50} duration={500} to="about">
         <PersonOutlineOutlinedIcon className="cursor-pointer text-black/75 dark:text-slate-50" />
       </Link>
-      <Link spy={true} smooth={true} offset={50} duration={500} to="home">
+      <Link spy={true} smooth={true} offset={50} duration={500} to="narasi">
         <EmojiEventsOutlinedIcon className="cursor-pointer text-black/75 dark:text-slate-50" />
       </Link>
-      <Link spy={true} smooth={true} offset={50} duration={500} to="narasi">
+      <Link spy={true} smooth={true} offset={50} duration={500} to="gallery">
         <CollectionsOutlinedIcon className="cursor-pointer text-black/75 dark:text-slate-50" />
       </Link>
       <Link spy={true} smooth={true} offset={50} duration={500} to="contact">

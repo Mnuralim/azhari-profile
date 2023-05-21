@@ -8,7 +8,7 @@ import SendOutlinedIcon from "@mui/icons-material/SendOutlined";
 export const HomePage = () => {
   return (
     <section id="home" className="relative p-5 lg:px-16">
-      <div className="relative z-50 flex flex-col items-center justify-center h-screen md:gap-5 lg:flex-row-reverse lg:gap-48">
+      <div className="relative z-50 mt-10 flex flex-col items-center justify-center h-screen md:gap-5 lg:flex-row-reverse lg:gap-48">
         <motion.div variants={slideIn("right", "tween", 0.5, 1.5)} initial="hidden" whileInView="show" className="bg-indigo-500 w-80 h-80 blob opacity-100 overflow-hidden lg:h-[450px] lg:w-[450px]">
           <img src={"/img/azhari.png"} className="mt-5 -mb-10" />
         </motion.div>
