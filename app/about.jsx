@@ -17,15 +17,15 @@ const About = () => {
         </motion.div>
         <motion.div variants={slideIn("right", "tween", 0.5, 1.5)} initial="hidden" whileInView="show">
           <div className="w-full h-1 my-10 bg-slate-700"></div>
-          <h1 className="text-4xl font-bold text-center text-slate-700 lg:text-5xl dark:text-slate-50">
+          <h1 className="text-4xl font-bold text-center text-slate-700 lg:text-5xl lg:text-left dark:text-slate-50">
             Tentang <span className="text-indigo-500">Azhari</span>
           </h1>
           <p className="mt-3 mb-5 text-base text-slate-500 md:w-96 lg:w-96 dark:text-slate-50">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis doloribus officia soluta reprehenderit amet culpa quidem aspernatur aperiam. Nesciunt dolorem voluptatibus magni, soluta repellendus error voluptatem accusamus enim
             nulla ex ducimus deleniti libero? Placeat aliquam exercitationem dicta perferendis ex possimus?
           </p>
-          <div className="text-sm md:w-96 lg:w-96">
-            <table>
+          <div className=" md:w-96 lg:w-96">
+            <table className="text-sm dark:text-slate-50 text-slate-500">
               <tr>
                 <td className="flex items-center pr-2 font-semibold w-28">
                   <span className="inline-block w-24">Tempat Lahir</span> <span>:</span>

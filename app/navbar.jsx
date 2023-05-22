@@ -35,39 +35,39 @@ const Navbar = () => {
     <motion.nav variants={navVariants} initial="hidden" whileInView="show" className="fixed top-0 z-[100] flex h-14  min-w-full justify-center bg-white/50 backdrop-blur-lg sm:px-28 dark:bg-slate-800/50">
       <div className="container flex items-center justify-between dark:text-slate-50">
         <div>
-          <Link spy={true} smooth={true} offset={50} duration={500} to="home" className="text-indigo-500 cursor-pointer">
+          <Link spy={true} smooth={true} offset={50} duration={300} to="home" className="text-indigo-500 cursor-pointer">
             Azhari
           </Link>
         </div>
         <div className="flex gap-4 ">
           <div>
-            <Link spy={true} smooth={true} offset={50} duration={500} to="home" className="cursor-pointer text-slate-500 dark:text-slate-50">
+            <Link spy={true} smooth={true} offset={50} duration={500} to="home" className="cursor-pointer text-slate-500 hover:text-indigo-500 dark:hover:text-indigo-500 dark:text-slate-50">
               Beranda
             </Link>
           </div>
           <div>
-            <Link spy={true} smooth={true} offset={50} duration={500} to="about" className="cursor-pointer text-slate-500 dark:text-slate-50">
+            <Link spy={true} smooth={true} offset={50} duration={500} to="about" className="cursor-pointer text-slate-500 hover:text-indigo-500 dark:hover:text-indigo-500 dark:text-slate-50">
               Tentang
             </Link>
           </div>
           <div>
-            <Link to="" className="text-slate-500 dark:text-slate-50">
+            <Link to="" className="cursor-pointer text-slate-500 hover:text-indigo-500 dark:hover:text-indigo-500 dark:text-slate-50">
               Pencapaian
             </Link>
           </div>
           <div>
-            <Link spy={true} smooth={true} offset={50} duration={500} to="narasi" className="cursor-pointer text-slate-500 dark:text-slate-50">
+            <Link spy={true} smooth={true} offset={50} duration={500} to="narasi" className="cursor-pointer text-slate-500 hover:text-indigo-500 dark:hover:text-indigo-500 dark:text-slate-50">
               Narasi
             </Link>
           </div>
 
           <div>
-            <Link spy={true} smooth={true} offset={50} duration={500} to="gallery" className="cursor-pointer text-slate-500 dark:text-slate-50">
+            <Link spy={true} smooth={true} offset={50} duration={500} to="gallery" className="cursor-pointer text-slate-500 hover:text-indigo-500 dark:hover:text-indigo-500 dark:text-slate-50">
               Galeri
             </Link>
           </div>
           <div>
-            <Link spy={true} smooth={true} offset={50} duration={500} to="contact" className="cursor-pointer text-slate-500 dark:text-slate-50">
+            <Link spy={true} smooth={true} offset={50} duration={500} to="contact" className="cursor-pointer text-slate-500 hover:text-indigo-500 dark:hover:text-indigo-500 dark:text-slate-50">
               Aspirasi
             </Link>
           </div>
@@ -85,19 +85,19 @@ const Navbar = () => {
       className="fixed inset-x-0 bottom-6 z-[100] mx-auto flex h-16 w-4/5 items-center justify-evenly rounded-2xl bg-white/40 text-lg backdrop-blur-md dark:bg-slate-900/50 "
     >
       <Link spy={true} smooth={true} offset={50} duration={500} to="home">
-        <HomeOutlinedIcon className="cursor-pointer text-black/75 dark:text-slate-50" />
+        <HomeOutlinedIcon className="cursor-pointer text-black/75 hover:text-indigo-500 dark:text-slate-50" />
       </Link>
       <Link spy={true} smooth={true} offset={50} duration={500} to="about">
-        <PersonOutlineOutlinedIcon className="cursor-pointer text-black/75 dark:text-slate-50" />
+        <PersonOutlineOutlinedIcon className="cursor-pointer text-black/75 hover:text-indigo-500 dark:text-slate-50" />
       </Link>
       <Link spy={true} smooth={true} offset={50} duration={500} to="narasi">
-        <EmojiEventsOutlinedIcon className="cursor-pointer text-black/75 dark:text-slate-50" />
+        <EmojiEventsOutlinedIcon className="cursor-pointer text-black/75 hover:text-indigo-500 dark:text-slate-50" />
       </Link>
       <Link spy={true} smooth={true} offset={50} duration={500} to="gallery">
-        <CollectionsOutlinedIcon className="cursor-pointer text-black/75 dark:text-slate-50" />
+        <CollectionsOutlinedIcon className="cursor-pointer text-black/75 hover:text-indigo-500 dark:text-slate-50" />
       </Link>
       <Link spy={true} smooth={true} offset={50} duration={500} to="contact">
-        <CallOutlinedIcon className="cursor-pointer text-black/75 dark:text-slate-50" />
+        <CallOutlinedIcon className="cursor-pointer text-black/75 hover:text-indigo-500 dark:text-slate-50" />
       </Link>
     </motion.nav>
   );
