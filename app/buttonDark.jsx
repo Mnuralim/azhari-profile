@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 
 const ButtonDark = () => {
-  const [dark, setDark] = useState(false);
+  const [dark, setDark] = useState(true);
 
   const togleDark = () => {
     setDark(!dark);

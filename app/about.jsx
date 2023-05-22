@@ -13,7 +13,7 @@ const About = () => {
           <img src={"/img/about1.png"} className="mx-auto my-auto mt-5" />
         </motion.div> */}
         <motion.div variants={slideIn("left", "tween", 0.5, 1.5)} initial="hidden" whileInView="show" className="mr-5 rounded-lg opacity-100 lg:h-[600px] lg:w-[410px]">
-          <img src={"/img/about1.png"} className="w-full h-full mx-auto my-auto" />
+          <img src={"/img/about1.png"} className="w-full h-full mx-auto my-auto rounded-b-full" />
         </motion.div>
         <motion.div variants={slideIn("right", "tween", 0.5, 1.5)} initial="hidden" whileInView="show">
           <div className="w-full h-1 my-10 bg-slate-700"></div>

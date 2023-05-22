@@ -1,5 +1,5 @@
 "use client";
-import Link from "next/link";
+import { Link } from "react-scroll";
 import React from "react";
 import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
 import { motion } from "framer-motion";
@@ -22,20 +22,23 @@ const Footer = () => {
           <div className="flex flex-col gap-3">
             <h6 className="font-semibold text-slate-700 md:text-xl dark:text-slate-50">Informasi</h6>
             <div className="flex flex-col gap-2 text-sm text-slate-500 md:text-base dark:text-slate-300">
-              <Link href={"#"} className="cursor-pointer hover:text-indigo-500">
+              <Link spy={true} smooth={true} offset={50} duration={500} to="home" className="cursor-pointer text-slate-500 hover:text-indigo-500 dark:hover:text-indigo-500 dark:text-slate-50">
                 Beranda
               </Link>
-              <Link href={"#"} className="cursor-pointer hover:text-indigo-500">
+              <Link spy={true} smooth={true} offset={50} duration={500} to="about" className="cursor-pointer text-slate-500 hover:text-indigo-500 dark:hover:text-indigo-500 dark:text-slate-50">
                 Tentang
               </Link>
-              <Link href={"#"} className="cursor-pointer hover:text-indigo-500">
+              <Link spy={true} smooth={true} offset={50} duration={500} to="narasi" className="cursor-pointer text-slate-500 hover:text-indigo-500 dark:hover:text-indigo-500 dark:text-slate-50">
+                Narasi
+              </Link>
+              <Link spy={true} smooth={true} offset={50} duration={500} to="gallery" className="cursor-pointer text-slate-500 hover:text-indigo-500 dark:hover:text-indigo-500 dark:text-slate-50">
                 Galeri
               </Link>
-              <Link href={"#"} className="cursor-pointer hover:text-indigo-500">
-                Pencapaian
+              <Link spy={true} smooth={true} offset={50} duration={500} to="contact" className="cursor-pointer text-slate-500 hover:text-indigo-500 dark:hover:text-indigo-500 dark:text-slate-50">
+                Aspirasi
               </Link>
-              <Link href={"#"} className="cursor-pointer hover:text-indigo-500">
-                Kontak
+              <Link to="" className="cursor-pointer text-slate-500 hover:text-indigo-500 dark:hover:text-indigo-500 dark:text-slate-50">
+                Komunitas
               </Link>
             </div>
           </div>

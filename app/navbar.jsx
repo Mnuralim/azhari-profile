@@ -5,6 +5,7 @@ import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined
 import CallOutlinedIcon from "@mui/icons-material/CallOutlined";
 import EmojiEventsOutlinedIcon from "@mui/icons-material/EmojiEventsOutlined";
 import CollectionsOutlinedIcon from "@mui/icons-material/CollectionsOutlined";
+import PeopleRoundedIcon from "@mui/icons-material/PeopleRounded";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 import { navVariants, slideIn } from "@/utils/motion";
@@ -51,11 +52,6 @@ const Navbar = () => {
             </Link>
           </div>
           <div>
-            <Link to="" className="cursor-pointer text-slate-500 hover:text-indigo-500 dark:hover:text-indigo-500 dark:text-slate-50">
-              Pencapaian
-            </Link>
-          </div>
-          <div>
             <Link spy={true} smooth={true} offset={50} duration={500} to="narasi" className="cursor-pointer text-slate-500 hover:text-indigo-500 dark:hover:text-indigo-500 dark:text-slate-50">
               Narasi
             </Link>
@@ -69,6 +65,11 @@ const Navbar = () => {
           <div>
             <Link spy={true} smooth={true} offset={50} duration={500} to="contact" className="cursor-pointer text-slate-500 hover:text-indigo-500 dark:hover:text-indigo-500 dark:text-slate-50">
               Aspirasi
+            </Link>
+          </div>
+          <div>
+            <Link to="" className="cursor-pointer text-slate-500 hover:text-indigo-500 dark:hover:text-indigo-500 dark:text-slate-50">
+              Komunitas
             </Link>
           </div>
         </div>
@@ -98,6 +99,9 @@ const Navbar = () => {
       </Link>
       <Link spy={true} smooth={true} offset={50} duration={500} to="contact">
         <CallOutlinedIcon className="cursor-pointer text-black/75 hover:text-indigo-500 dark:text-slate-50" />
+      </Link>
+      <Link spy={true} smooth={true} offset={50} duration={500} to="contact">
+        <PeopleRoundedIcon className="cursor-pointer text-black/75 hover:text-indigo-500 dark:text-slate-50" />
       </Link>
     </motion.nav>
   );
