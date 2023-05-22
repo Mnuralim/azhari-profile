@@ -7,17 +7,17 @@ import SendOutlinedIcon from "@mui/icons-material/SendOutlined";
 
 const About = () => {
   return (
-    <section id="about" className="relative flex items-center justify-center min-h-screen p-5 mt-10 lg:px-16  ">
+    <section id="about" className="relative flex items-center justify-center min-h-screen p-5 mt-10 lg:px-16 ">
       <div className="relative z-50 flex flex-col items-center justify-center mt-5 lg:flex-row lg:gap-48 ">
         {/* <motion.div variants={slideIn("left", "tween", 0.5, 1.5)} initial="hidden" whileInView="show" className="bg-indigo-500 w-72 h-72 rounded-lg opacity-100 overflow-hidden lg:h-[450px] lg:w-[450px]">
           <img src={"/img/about1.png"} className="mx-auto my-auto mt-5" />
         </motion.div> */}
         <motion.div variants={slideIn("left", "tween", 0.5, 1.5)} initial="hidden" whileInView="show" className="mr-5 rounded-lg opacity-100 lg:h-[600px] lg:w-[410px]">
-          <img src={"/img/about1.png"} className="mx-auto my-auto h-full w-full" />
+          <img src={"/img/about1.png"} className="w-full h-full mx-auto my-auto" />
         </motion.div>
         <motion.div variants={slideIn("right", "tween", 0.5, 1.5)} initial="hidden" whileInView="show">
-          <div className="w-full h-1 bg-slate-700 my-10"></div>
-          <h1 className="text-4xl font-bold text-slate-700 lg:text-5xl dark:text-slate-50 text-center">
+          <div className="w-full h-1 my-10 bg-slate-700"></div>
+          <h1 className="text-4xl font-bold text-center text-slate-700 lg:text-5xl dark:text-slate-50">
             Tentang <span className="text-indigo-500">Azhari</span>
           </h1>
           <p className="mt-3 mb-5 text-base text-slate-500 md:w-96 lg:w-96 dark:text-slate-50">
@@ -27,17 +27,17 @@ const About = () => {
           <div className="text-sm md:w-96 lg:w-96">
             <table>
               <tr>
-                <td class="pr-2  flex items-center w-28 font-semibold">
+                <td className="flex items-center pr-2 font-semibold w-28">
                   <span className="inline-block w-24">Tempat Lahir</span> <span>:</span>
                 </td>
-                <td class="">Mawasangka, 28 Oktober 1968</td>
+                <td>Mawasangka, 28 Oktober 1968</td>
               </tr>
               <tr>
-                <td class="pr-2 font-semibold  w-28 flex items-center">
+                <td className="flex items-center pr-2 font-semibold w-28">
                   <span className="inline-block w-24">Pendidikan</span>
                   <span>:</span>
                 </td>
-                <td class="">
+                <td>
                   <ul>
                     <li>Fakultas Hukum, Universitas Gadjah Mada</li>
                     <li>Fakultas Ilmu Sosial dan Ilmu Politik, Universitas Indonesia</li>
@@ -45,16 +45,16 @@ const About = () => {
                 </td>
               </tr>
               <tr>
-                <td class="pr-2  flex items-center w-28 font-semibold">
+                <td className="flex items-center pr-2 font-semibold w-28">
                   <span className="inline-block w-24">Istri</span>
                   <span>:</span>
                 </td>
-                <td class="pr-2 ">Lorem, ipsum.</td>
+                <td className="pr-2 ">Lorem, ipsum.</td>
               </tr>
             </table>
           </div>
           <div className="w-full h-2 mt-5">
-            <Link href={"#"} className="px-4 py-3 text-white block text-center bg-indigo-500 rounded w-full">
+            <Link href={"#"} className="block w-full px-4 py-3 text-center text-white bg-indigo-500 rounded">
               Riwayat
               <SendOutlinedIcon className="pl-2" />
             </Link>
