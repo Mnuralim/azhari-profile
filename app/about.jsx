@@ -30,7 +30,7 @@ const About = () => {
                 <td className="flex items-center pr-2 font-semibold w-28">
                   <span className="inline-block w-24">Tempat Lahir</span> <span>:</span>
                 </td>
-                <td>Mawasangka, 28 Oktober 1968</td>
+                <td>Mawasangka, 10 Juni 1976</td>
               </tr>
               <tr>
                 <td className="flex items-center pr-2 font-semibold w-28">
@@ -39,7 +39,7 @@ const About = () => {
                 </td>
                 <td>
                   <ul>
-                    <li>Fakultas Hukum, Universitas Gadjah Mada</li>
+                    <li>Sekolah Tinggi Pemerintahan Dalam Negeri (STPDN)</li>
                     <li>Fakultas Ilmu Sosial dan Ilmu Politik, Universitas Indonesia</li>
                   </ul>
                 </td>
@@ -49,7 +49,7 @@ const About = () => {
                   <span className="inline-block w-24">Istri</span>
                   <span>:</span>
                 </td>
-                <td className="pr-2 ">Lorem, ipsum.</td>
+                <td className="pr-2 ">Umi Noranah</td>
               </tr>
             </table>
           </div>
