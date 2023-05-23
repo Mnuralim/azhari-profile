@@ -25,24 +25,6 @@ export const GalleryCardPhoto = () => {
             <div style={{ backgroundImage: "url('/img/galeri3.jpg')", backgroundSize: "cover", backgroundRepeat: "no-repeat" }} className="w-full min-h-[250px] "></div>
           </div>
         </motion.div>
-        <motion.div variants={galleryVariant}>
-          <h2 className="my-3 text-lg font-semibold text-slate-700 dark:text-slate-50">Silaturahmi Dengan Mahasiswa</h2>
-          <div className="w-full p-2 transition-colors duration-200 ease-in-out border border-slate-400 hover:bg-slate-400 dark:hover:bg-slate-400 dark:border-slate-400">
-            <div style={{ backgroundImage: "url('/img/mhs.jpg')", backgroundSize: "cover", backgroundRepeat: "no-repeat" }} className="w-full min-h-[250px] "></div>
-          </div>
-        </motion.div>
-        <motion.div variants={galleryVariant}>
-          <h2 className="my-3 text-lg font-semibold text-slate-700 dark:text-slate-50">Silaturahmi Dengan Mahasiswa</h2>
-          <div className="w-full p-2 transition-colors duration-200 ease-in-out border border-slate-400 hover:bg-slate-400 dark:hover:bg-slate-400 dark:border-slate-400">
-            <div style={{ backgroundImage: "url('/img/mhs.jpg')", backgroundSize: "cover", backgroundRepeat: "no-repeat" }} className="w-full min-h-[250px] "></div>
-          </div>
-        </motion.div>
-        <motion.div variants={galleryVariant}>
-          <h2 className="my-3 text-lg font-semibold text-slate-700 dark:text-slate-50">Silaturahmi Dengan Mahasiswa</h2>
-          <div className="w-full p-2 transition-colors duration-200 ease-in-out border border-slate-400 hover:bg-slate-400 dark:hover:bg-slate-400 dark:border-slate-400">
-            <div style={{ backgroundImage: "url('/img/mhs.jpg')", backgroundSize: "cover", backgroundRepeat: "no-repeat" }} className="w-full min-h-[250px] "></div>
-          </div>
-        </motion.div>
       </motion.div>
     </div>
   );
@@ -59,39 +41,7 @@ export const GalleryCardVideo = () => {
           </div>
         </motion.div> */}
         <motion.div variants={galleryVariant}>
-          <h2 className="my-3 text-lg font-semibold text-slate-700 dark:text-slate-50">Lorem ipsum dolor sit.</h2>
-          <div className="w-full p-2 transition-colors duration-200 ease-in-out border border-slate-400 hover:bg-slate-400 dark:hover:bg-slate-400 dark:border-slate-400">
-            <video src="/video/coba.mp4" className="w-full h-full" controls>
-              Your browser does not support the video tag.
-            </video>
-          </div>
-        </motion.div>
-        <motion.div variants={galleryVariant}>
-          <h2 className="my-3 text-lg font-semibold text-slate-700 dark:text-slate-50">Lorem ipsum dolor sit.</h2>
-          <div className="w-full p-2 transition-colors duration-200 ease-in-out border border-slate-400 hover:bg-slate-400 dark:hover:bg-slate-400 dark:border-slate-400">
-            <video src="/video/coba.mp4" className="w-full h-full" controls>
-              Your browser does not support the video tag.
-            </video>
-          </div>
-        </motion.div>
-        <motion.div variants={galleryVariant}>
-          <h2 className="my-3 text-lg font-semibold text-slate-700 dark:text-slate-50">Lorem ipsum dolor sit.</h2>
-          <div className="w-full p-2 transition-colors duration-200 ease-in-out border border-slate-400 hover:bg-slate-400 dark:hover:bg-slate-400 dark:border-slate-400">
-            <video src="/video/coba.mp4" className="w-full h-full" controls>
-              Your browser does not support the video tag.
-            </video>
-          </div>
-        </motion.div>
-        <motion.div variants={galleryVariant}>
-          <h2 className="my-3 text-lg font-semibold text-slate-700 dark:text-slate-50">Lorem ipsum dolor sit.</h2>
-          <div className="w-full p-2 transition-colors duration-200 ease-in-out border border-slate-400 hover:bg-slate-400 dark:hover:bg-slate-400 dark:border-slate-400">
-            <video src="/video/coba.mp4" className="w-full h-full" controls>
-              Your browser does not support the video tag.
-            </video>
-          </div>
-        </motion.div>
-        <motion.div variants={galleryVariant}>
-          <h2 className="my-3 text-lg font-semibold text-slate-700 dark:text-slate-50">Lorem ipsum dolor sit.</h2>
+          <h2 className="my-3 text-lg font-semibold text-slate-700 dark:text-slate-50">Azhari yang Menginspirasi</h2>
           <div className="w-full p-2 transition-colors duration-200 ease-in-out border border-slate-400 hover:bg-slate-400 dark:hover:bg-slate-400 dark:border-slate-400">
             <video src="/video/coba.mp4" className="w-full h-full" controls>
               Your browser does not support the video tag.

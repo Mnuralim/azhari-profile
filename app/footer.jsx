@@ -14,7 +14,7 @@ const Footer = () => {
             <h1 className="font-medium text-indigo-500 md:text-xl md:font-semibold">Azhari</h1>
             <h6 className="text-sm text-slate-500 md:text-base dark:text-slate-300">Demisioner Rektor USN Kolaka</h6>
             <div className="gap-3 mb-0 text-sm md:text-base">
-              <Link href={"https://www.facebook.com/profile.php?id=100079286988073"} target="blank">
+              <Link to={"https://www.facebook.com/profile.php?id=100079286988073"} target="blank">
                 <FacebookRoundedIcon className="text-slate-500" fontSize="small" />
               </Link>
             </div>
@@ -37,7 +37,7 @@ const Footer = () => {
               <Link spy={true} smooth={true} offset={50} duration={500} to="contact" className="cursor-pointer text-slate-500 hover:text-indigo-500 dark:hover:text-indigo-500 dark:text-slate-50">
                 Aspirasi
               </Link>
-              <Link to="" className="cursor-pointer text-slate-500 hover:text-indigo-500 dark:hover:text-indigo-500 dark:text-slate-50">
+              <Link to="contact" className="cursor-pointer text-slate-500 hover:text-indigo-500 dark:hover:text-indigo-500 dark:text-slate-50">
                 Komunitas
               </Link>
             </div>

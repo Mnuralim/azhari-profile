@@ -9,9 +9,9 @@ import { slideIn } from "@/utils/motion";
 
 const Aspiration = () => {
   return (
-    <section className="relative min-h-screen mt-32 mb-20 flex items-center" id="contact">
+    <section className="relative min-h-screen mt-10 mb-20 flex items-center lg:mt-20" id="contact">
       <div className="w-full">
-        <h1 className="text-4xl font-bold text-center lg:text-6xl mt-20">
+        <h1 className="text-4xl font-bold text-center lg:text-5xl mt-16">
           Aspirasi <span className="text-indigo-500">Kamu</span>
         </h1>
         <div className="flex flex-col items-center justify-center mt-10 lg:flex-row lg:gap-10">

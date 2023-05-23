@@ -10,7 +10,7 @@ const Narasi = () => {
   return (
     <section id="narasi" className="relative min-h-screen flex items-center p-5 mt-10 ">
       <div>
-        <h1 className="mb-5 text-4xl font-bold text-center mt-10 lg:mt-24">Narasi</h1>
+        <h1 className="mb-5 text-4xl font-bold text-center mt-10 lg:mt-24 lg:text-5xl">Narasi</h1>
         <motion.div variants={galleryContainerVariant} initial="hidden" whileInView="show" className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
           <motion.div variants={galleryVariant} className="w-full p-2 rounded-xl bg-slate-300/50 dark:bg-slate-700/50">
             <div style={{ backgroundImage: "url('/img/bagian1.jpg')", backgroundSize: "cover", backgroundRepeat: "no-repeat" }} className="w-full min-h-[250px] rounded-md"></div>
