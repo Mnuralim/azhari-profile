@@ -40,7 +40,7 @@ const About = () => {
                 <td>
                   <ul>
                     <li>Sekolah Tinggi Pemerintahan Dalam Negeri (STPDN)</li>
-                    <li>Fakultas Ilmu Sosial dan Ilmu Politik, Universitas Indonesia</li>
+                    <li></li>
                   </ul>
                 </td>
               </tr>
