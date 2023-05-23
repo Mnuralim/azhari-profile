@@ -110,7 +110,7 @@ export default function CustomPaginationActionsTable() {
   };
 
   return (
-    <section className="overflow-x-hidden bg-slate-800 text-slate-50">
+    <section className="mt-20 overflow-x-hidden bg-slate-800 text-slate-50">
       <TableContainer component={Paper}>
         <Table aria-label="custom pagination table">
           <TableHead>
