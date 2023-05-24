@@ -1,5 +1,6 @@
 "use client";
 import { Link } from "react-scroll";
+import NextLink from "next/link";
 import React from "react";
 import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
 import { motion } from "framer-motion";
@@ -14,9 +15,9 @@ const Footer = () => {
             <h1 className="font-medium text-indigo-500 md:text-xl md:font-semibold">Azhari</h1>
             <h6 className="text-sm text-slate-500 md:text-base dark:text-slate-300">Demisioner Rektor USN Kolaka</h6>
             <div className="gap-3 mb-0 text-sm md:text-base">
-              <Link to={"https://www.facebook.com/profile.php?id=100079286988073"} target="blank">
+              <NextLink href={"https://www.facebook.com/profile.php?id=100079286988073"} target="blank">
                 <FacebookRoundedIcon className="text-slate-500" fontSize="small" />
-              </Link>
+              </NextLink>
             </div>
           </div>
           <div className="flex flex-col gap-3">

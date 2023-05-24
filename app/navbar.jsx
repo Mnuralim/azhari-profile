@@ -7,6 +7,7 @@ import EmojiEventsOutlinedIcon from "@mui/icons-material/EmojiEventsOutlined";
 import CollectionsOutlinedIcon from "@mui/icons-material/CollectionsOutlined";
 import PeopleRoundedIcon from "@mui/icons-material/PeopleRounded";
 import { Link } from "react-scroll";
+import NextLink from "next/link";
 import { motion } from "framer-motion";
 import { navVariants, slideIn } from "@/utils/motion";
 import ButtonDark from "./buttonDark";
@@ -42,9 +43,11 @@ const Navbar = () => {
         </div>
         <div className="flex gap-4 ">
           <div>
-            <Link spy={true} smooth={true} offset={50} duration={500} to="home" className="cursor-pointer text-slate-500 hover:text-indigo-500 dark:hover:text-indigo-500 dark:text-slate-50">
-              Beranda
-            </Link>
+            <NextLink href={"/"} passHref>
+              <Link spy={true} smooth={true} offset={50} duration={500} to="home" className="cursor-pointer text-slate-500 hover:text-indigo-500 dark:hover:text-indigo-500 dark:text-slate-50">
+                Beranda
+              </Link>
+            </NextLink>
           </div>
           <div>
             <Link spy={true} smooth={true} offset={50} duration={500} to="about" className="cursor-pointer text-slate-500 hover:text-indigo-500 dark:hover:text-indigo-500 dark:text-slate-50">
