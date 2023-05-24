@@ -1,19 +1,62 @@
 export const historyAzhari = [
   {
-    label: "Select campaign settings",
-    description: `For each ad campaign that you create, you can control how much
-              you're willing to spend on clicks and conversions, which networks
-              and geographical locations you want your ads to show on, and more.`,
+    id: 1,
+    thumbnail: "/img/bagian1.jpg",
+    title: "Rektor PTN Universitas Sembilanbelas November Kolaka",
+    year: `Tahun 2014-2022`,
   },
   {
-    label: "Create an ad group",
-    description: "An ad group contains one or more ads which target a shared set of keywords.",
+    id: 2,
+    thumbnail: "/img/bagian1.jpg",
+    title: "Pelopor peralihan status USN Kolaka dari PTS menjadi PTN",
+    year: "Tahun 2010-2014",
   },
   {
-    label: "Create an ad",
-    description: `Try out different ad text to see what brings in the most customers,
-              and learn how to enhance your ads using features like ad extensions.
-              If you run into any problems with your ads, find out how to tell if
-              they're running and how to resolve approval issues.`,
+    id: 3,
+    thumbnail: "/img/bagian1.jpg",
+    title: "Rektor Universitas 19 November Kolaka",
+    year: `Tahun 2005-2013`,
+  },
+  {
+    id: 4,
+    thumbnail: "/img/bagian1.jpg",
+    title: "Wakil Sekretaris Redistribusi Aset PT.Perkebunan Ladongi Kolaka,Sulawesi Tenggara",
+    year: `Tahun 2004-2007`,
+  },
+  {
+    id: 5,
+    thumbnail: "/img/bagian1.jpg",
+    title: "Ketua Sekolah Tinggi Keguruan dan Ilmu Pendidikan (SKIP) Kolaka",
+    year: "Tahun 2004",
+  },
+  {
+    id: 6,
+    thumbnail: "/img/bagian1.jpg",
+    title: "Staf Khusus Bupati Kolaka,Provinsi Sulawesi Tenggara",
+    year: `Tahun 2003-2008`,
+  },
+  {
+    id: 7,
+    thumbnail: "/img/bagian1.jpg",
+    title: "Kepala Subbagian Pusat Data Elektronik Kab.Kolaka",
+    year: `Tahun 2003-2004`,
+  },
+  {
+    id: 8,
+    thumbnail: "/img/bagian1.jpg",
+    title: "Kepala Subbagian Kependudukan Bagian Pemerintahan Umum Setda Kab.Kolaka",
+    year: "Tahun 2000",
+  },
+  {
+    id: 9,
+    thumbnail: "/img/bagian1.jpg",
+    title: "Pelaksana Tugas (PLTP) Kepala Subbagian Trantib Bagian Pemerintahan Umum Setda Kab.Kolaka",
+    year: `Tahun 2000`,
+  },
+  {
+    id: 10,
+    thumbnail: "/img/bagian1.jpg",
+    title: "PNS Depdagri Golongan III/a",
+    year: `Tahun 1999`,
   },
 ];
