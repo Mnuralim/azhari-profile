@@ -11,9 +11,9 @@ const ButtonDark = () => {
 
   useEffect(() => {
     if (dark == false) {
-      document.body.className = "light";
+      document.getElementById("all").className = "light";
     } else {
-      document.body.className = "dark";
+      document.getElementById("all").className = "dark";
     }
   });
   return (

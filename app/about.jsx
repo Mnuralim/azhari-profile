@@ -55,7 +55,7 @@ const About = () => {
             </table>
           </div>
           <div className="w-full h-2 mt-5">
-            <Link href={"#"} className="block w-full px-4 py-3 text-center text-white bg-indigo-500 rounded">
+            <Link href={"/riwayat"} className="block w-full px-4 py-3 text-center text-white bg-indigo-500 rounded">
               Riwayat
               <SendOutlinedIcon className="pl-2" />
             </Link>
