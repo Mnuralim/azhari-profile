@@ -128,7 +128,7 @@ const History = () => {
                 <div className="h-[100px] w-[1px] bg-slate-600"></div>
               </div>
               <div className=" w-[220px] md:w-80 md:mt-3 lg:w-[500px]">
-                <h2 className="mb-2 text-base font-bold text-indigo-500 lg:text-lg">: PNS Depdagri Golongan III/a</h2>
+                <h2 className="mb-2 text-base font-bold text-indigo-500 lg:text-lg">PNS Depdagri Golongan III/a</h2>
                 <p className="text-sm font-semibold text-slate-500 dark:text-slate-50">Tahun 1999</p>
               </div>
             </div>
