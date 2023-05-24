@@ -25,7 +25,7 @@ const About = () => {
             nulla ex ducimus deleniti libero? Placeat aliquam exercitationem dicta perferendis ex possimus?
           </p>
           <div className=" md:w-96 lg:w-96">
-            <table className="text-sm dark:text-slate-50 text-slate-500">
+            <table className="text-sm leading-6 dark:text-slate-50 text-slate-500">
               <tr>
                 <td className="flex items-center pr-2 font-semibold w-28">
                   <span className="inline-block w-24">Tempat Lahir</span> <span>:</span>
@@ -39,8 +39,9 @@ const About = () => {
                 </td>
                 <td>
                   <ul>
-                    <li>Sekolah Tinggi Pemerintahan Dalam Negeri (STPDN)</li>
-                    <li></li>
+                    <li>Sekolah Tinggi Pemerintahan Dalam Negeri (1999)</li>
+                    <li>Magister Administrasi Publik Fisipol Universitas Gadjah Mada Yogyakarta (2003)</li>
+                    <li>Doktor Bidang Fisipol Universitas Gajah Mada Yogyakarta (2010)</li>
                   </ul>
                 </td>
               </tr>
