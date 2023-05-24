@@ -16,6 +16,7 @@ export const DarkModeContext = createContext();
 
 const Navbar = () => {
   const [screenSize, setScreenSize] = useState(0);
+  const path = window.location.pathname;
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -81,6 +82,8 @@ const Navbar = () => {
         <ButtonDark />
       </div>
     </motion.nav>
+  ) : path == "/riwayat" ? (
+    ""
   ) : (
     <motion.nav
       variants={slideIn("up", "tween", 0.1, 0.3)}

@@ -15,7 +15,7 @@ const History = () => {
               <div key={data.id} className="flex justify-center gap-3 md:gap-6 group">
                 <div className="flex flex-col items-center">
                   <div>
-                    <img src={data.thumbnail} alt={data.title} className="w-[80px] h-[80px] rounded-full  border-[rgb(209,59,59)] border-opacity-0 border-2 group-hover:border-opacity-100 transition-opacity duration-300 ease-in-out" />
+                    <img src={data.thumbnail} alt={data.title} className="w-[80px] h-[80px] rounded-full  border-[rgb(209,59,59)] border-opacity-0 border-2 group-hover:border-opacity-100 transition-all duration-300 ease-in-out" />
                   </div>
                   <div className="h-[100px] w-[1px] bg-slate-600"></div>
                 </div>
