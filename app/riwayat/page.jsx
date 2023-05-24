@@ -21,7 +21,7 @@ const History = () => {
                 </div>
                 <div className=" w-[220px] md:w-80 md:mt-3 lg:w-[500px]">
                   <h2 className="mb-2 text-base font-bold text-indigo-500 lg:text-lg dark:text-slate-50">{data.title}</h2>
-                  <p className="text-sm font-semibold text-slate-500 dark:text-slate-50">{data.year}</p>
+                  <p className="text-sm font-semibold text-slate-500 dark:text-slate-400">{data.year}</p>
                 </div>
               </div>
             ))}
