@@ -11,12 +11,14 @@ import NextLink from "next/link";
 import { motion } from "framer-motion";
 import { navVariants, slideIn } from "@/utils/motion";
 import ButtonDark from "./buttonDark";
+import { usePathname } from "next/navigation";
 
 export const DarkModeContext = createContext();
 
 const Navbar = () => {
   const [screenSize, setScreenSize] = useState(0);
-  const path = window.location.pathname;
+  const path = usePathname();
+  console.log(path);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -38,9 +40,9 @@ const Navbar = () => {
     <motion.nav variants={navVariants} initial="hidden" whileInView="show" className="fixed top-0 z-[100] flex h-14  min-w-full justify-center bg-white/50 backdrop-blur-lg sm:px-28 dark:bg-slate-800/50">
       <div className="container flex items-center justify-between dark:text-slate-50">
         <div>
-          <Link spy={true} smooth={true} offset={50} duration={300} to="home" className="text-indigo-500 cursor-pointer">
+          <NextLink href={"/"} className="text-indigo-500 cursor-pointer">
             Azhari
-          </Link>
+          </NextLink>
         </div>
         <div className="flex gap-4 ">
           <div>
