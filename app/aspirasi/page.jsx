@@ -11,7 +11,6 @@ import TableFooter from "@mui/material/TableFooter";
 import TablePagination from "@mui/material/TablePagination";
 import TableRow from "@mui/material/TableRow";
 import TableHead from "@mui/material/TableHead";
-import Paper from "@mui/material/Paper";
 import IconButton from "@mui/material/IconButton";
 import FirstPageIcon from "@mui/icons-material/FirstPage";
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
@@ -107,7 +106,7 @@ export default function CustomPaginationActionsTable() {
           Daftar <span className="text-indigo-500">Aspirasi</span>
         </h1>
       </div>
-      <TableContainer className="bg-transparent " component={Paper}>
+      <TableContainer>
         <Table aria-label="custom pagination table">
           <TableHead>
             <TableRow>
@@ -121,11 +120,11 @@ export default function CustomPaginationActionsTable() {
           <TableBody>
             {(rowsPerPage > 0 ? rows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage) : rows).map((row) => (
               <TableRow key={row._id}>
-                <TableCell className="dark:text-slate-50 capitalize" component="th" scope="row">
+                <TableCell className="capitalize dark:text-slate-50" component="th" scope="row">
                   {row.name}
                 </TableCell>
-                <TableCell className="dark:text-slate-50 capitalize">{row.address}</TableCell>
-                <TableCell className="dark:text-slate-50 capitalize">{row.message}</TableCell>
+                <TableCell className="capitalize dark:text-slate-50">{row.address}</TableCell>
+                <TableCell className="capitalize dark:text-slate-50">{row.message}</TableCell>
               </TableRow>
             ))}
 
