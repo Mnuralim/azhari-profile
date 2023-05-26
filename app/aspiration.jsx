@@ -20,6 +20,7 @@ const Aspiration = () => {
   const [message, setMessage] = useState("");
   const [alert, setAlert] = useState("");
   const [open, setOpen] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleClose = (event, reason) => {
     if (reason === "clickaway") {
@@ -40,6 +41,7 @@ const Aspiration = () => {
 
   const handleForm = async (e) => {
     e.preventDefault();
+    setLoading(true);
     try {
       const response = await axios.post("https://colorful-calf-helmet.cyclic.app/post", {
         name: name.toLowerCase(),
@@ -47,6 +49,7 @@ const Aspiration = () => {
         message: message.toLowerCase(),
       });
       if (response.status == 200) {
+        setLoading(false);
         setOpen(true);
         setAlert(response.data.message);
         setName("");
@@ -144,7 +147,7 @@ const Aspiration = () => {
               <div className="self-start mt-5">
                 <button type="submit" className="px-3 py-1 text-white bg-indigo-500 rounded ">
                   <SendOutlinedIcon className="pr-2" />
-                  Kirim
+                  {loading ? "Mengirim..." : "Kirim"}
                 </button>
               </div>
             </form>
