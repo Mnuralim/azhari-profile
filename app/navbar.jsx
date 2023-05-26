@@ -18,7 +18,6 @@ export const DarkModeContext = createContext();
 const Navbar = () => {
   const [screenSize, setScreenSize] = useState(0);
   const path = usePathname();
-  console.log(path);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -46,11 +45,9 @@ const Navbar = () => {
         </div>
         <div className="flex gap-4 ">
           <div>
-            <NextLink href={"/"} passHref>
-              <Link spy={true} smooth={true} offset={50} duration={500} to="home" className="cursor-pointer text-slate-500 hover:text-indigo-500 dark:hover:text-indigo-500 dark:text-slate-50">
-                Beranda
-              </Link>
-            </NextLink>
+            <Link spy={true} smooth={true} offset={50} duration={500} to="home" className="cursor-pointer text-slate-500 hover:text-indigo-500 dark:hover:text-indigo-500 dark:text-slate-50">
+              Beranda
+            </Link>
           </div>
           <div>
             <Link spy={true} smooth={true} offset={50} duration={500} to="about" className="cursor-pointer text-slate-500 hover:text-indigo-500 dark:hover:text-indigo-500 dark:text-slate-50">

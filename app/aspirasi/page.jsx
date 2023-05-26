@@ -17,7 +17,6 @@ import FirstPageIcon from "@mui/icons-material/FirstPage";
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
 import LastPageIcon from "@mui/icons-material/LastPage";
-import { dataAspirasi } from "@/data/dummy";
 
 function TablePaginationActions(props) {
   const theme = useTheme();
@@ -70,32 +69,24 @@ function createData(name, calories, fat) {
 
 const columns = [
   { id: "nama", label: "Nama", minWidth: 170 },
-  { id: "alamat", label: "Alamat", minWidth: 100 },
+  { id: "desa", label: "Desa/Kelurahan", minWidth: 100 },
   { id: "aspirasi", label: "Aspirasi", minWidth: 100 },
 ];
 
-// const rows = [
-//   createData("Cupcake", 305, 3.7),
-//   createData("Donut", 452, 25.0),
-//   createData("Eclair", 262, 16.0),
-//   createData("Frozen yoghurt", 159, 6.0),
-//   createData("Gingerbread", 356, 16.0),
-//   createData("Honeycomb", 408, 3.2),
-//   createData("Ice cream sandwich", 237, 9.0),
-//   createData("Jelly Bean", 375, 0.0),
-//   createData("KitKat", 518, 26.0),
-//   createData("Lollipop", 392, 0.2),
-//   createData("Marshmallow", 318, 0),
-//   createData("Nougat", 360, 19.0),
-//   createData("Oreo", 437, 18.0),
-// ].sort((a, b) => (a.calories < b.calories ? -1 : 1));
-
-const rows = dataAspirasi.sort((a, b) => (a.alamat < b.alamat ? -1 : 1));
-console.log(rows);
-
 export default function CustomPaginationActionsTable() {
   const [page, setPage] = React.useState(0);
-  const [rowsPerPage, setRowsPerPage] = React.useState(5);
+  const [rowsPerPage, setRowsPerPage] = React.useState(25);
+  const [data, setData] = React.useState([]);
+
+  React.useEffect(() => {
+    const getData = async () => {
+      const res = await fetch("https://colorful-calf-helmet.cyclic.app/get-data");
+      const allData = await res.json();
+      setData(allData);
+    };
+    getData();
+  }, []);
+  const rows = data.sort((a, b) => (a.address < b.address ? -1 : 1));
 
   // Avoid a layout jump when reaching the last page with empty rows.
   const emptyRows = page > 0 ? Math.max(0, (1 + page) * rowsPerPage - rows.length) : 0;
@@ -110,13 +101,18 @@ export default function CustomPaginationActionsTable() {
   };
 
   return (
-    <section className="mt-20 overflow-x-hidden bg-slate-800 text-slate-50">
-      <TableContainer component={Paper}>
+    <section className="mt-20 overflow-x-hiddenbg-slate-50 dark:bg-slate-800 dark:text-slate-50">
+      <div>
+        <h1 className="mb-10 text-4xl font-bold text-center mt-14 text-slate-700 lg:text-5xl lg:mt-24 dark:text-slate-50">
+          Daftar <span className="text-indigo-500">Aspirasi</span>
+        </h1>
+      </div>
+      <TableContainer className="bg-transparent " component={Paper}>
         <Table aria-label="custom pagination table">
           <TableHead>
             <TableRow>
               {columns.map((column) => (
-                <TableCell key={column.id} align={"left"}>
+                <TableCell key={column.id} align={"left"} className="font-bold dark:text-slate-50">
                   {column.label}
                 </TableCell>
               ))}
@@ -124,12 +120,12 @@ export default function CustomPaginationActionsTable() {
           </TableHead>
           <TableBody>
             {(rowsPerPage > 0 ? rows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage) : rows).map((row) => (
-              <TableRow key={row.id}>
-                <TableCell component="th" scope="row">
-                  {row.nama}
+              <TableRow key={row._id}>
+                <TableCell className="dark:text-slate-50 capitalize" component="th" scope="row">
+                  {row.name}
                 </TableCell>
-                <TableCell>{row.alamat}</TableCell>
-                <TableCell>{row.aspirasi}</TableCell>
+                <TableCell className="dark:text-slate-50 capitalize">{row.address}</TableCell>
+                <TableCell className="dark:text-slate-50 capitalize">{row.message}</TableCell>
               </TableRow>
             ))}
 
@@ -142,7 +138,8 @@ export default function CustomPaginationActionsTable() {
           <TableFooter>
             <TableRow>
               <TablePagination
-                rowsPerPageOptions={[5, 10, 25, { label: "All", value: -1 }]}
+                className="dark:text-slate-50"
+                rowsPerPageOptions={[25, 50, 100, { label: "All", value: -1 }]}
                 colSpan={3}
                 count={rows.length}
                 rowsPerPage={rowsPerPage}
