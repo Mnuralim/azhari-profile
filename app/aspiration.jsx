@@ -47,6 +47,7 @@ const Aspiration = () => {
         message: message,
       });
       if (response.status == 200) {
+        setOpen(true);
         setAlert(response.data.message);
       }
     } catch (error) {
