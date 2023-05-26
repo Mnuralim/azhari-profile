@@ -26,32 +26,34 @@ const About = () => {
           </p>
           <div className=" md:w-96 lg:w-96">
             <table className="text-sm leading-6 dark:text-slate-50 text-slate-500">
-              <tr>
-                <td className="flex items-center pr-2 font-semibold w-28">
-                  <span className="inline-block w-24">Tempat Lahir</span> <span>:</span>
-                </td>
-                <td>Mawasangka, 10 Juni 1976</td>
-              </tr>
-              <tr>
-                <td className="flex items-center pr-2 font-semibold w-28">
-                  <span className="inline-block w-24">Pendidikan</span>
-                  <span>:</span>
-                </td>
-                <td>
-                  <ul>
-                    <li>Sekolah Tinggi Pemerintahan Dalam Negeri (1999)</li>
-                    <li>Magister Administrasi Publik Fisipol Universitas Gadjah Mada Yogyakarta (2003)</li>
-                    <li>Doktor Bidang Fisipol Universitas Gajah Mada Yogyakarta (2010)</li>
-                  </ul>
-                </td>
-              </tr>
-              <tr>
-                <td className="flex items-center pr-2 font-semibold w-28">
-                  <span className="inline-block w-24">Istri</span>
-                  <span>:</span>
-                </td>
-                <td className="pr-2 ">Umi Noranah</td>
-              </tr>
+              <tbody>
+                <tr>
+                  <td className="flex items-center pr-2 font-semibold w-28">
+                    <span className="inline-block w-24">Tempat Lahir</span> <span>:</span>
+                  </td>
+                  <td>Mawasangka, 10 Juni 1976</td>
+                </tr>
+                <tr>
+                  <td className="flex items-center pr-2 font-semibold w-28">
+                    <span className="inline-block w-24">Pendidikan</span>
+                    <span>:</span>
+                  </td>
+                  <td>
+                    <ul>
+                      <li>Sekolah Tinggi Pemerintahan Dalam Negeri (1999)</li>
+                      <li>Magister Administrasi Publik Fisipol Universitas Gadjah Mada Yogyakarta (2003)</li>
+                      <li>Doktor Bidang Fisipol Universitas Gajah Mada Yogyakarta (2010)</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="flex items-center pr-2 font-semibold w-28">
+                    <span className="inline-block w-24">Istri</span>
+                    <span>:</span>
+                  </td>
+                  <td className="pr-2 ">Umi Noranah</td>
+                </tr>
+              </tbody>
             </table>
           </div>
           <div className="w-full h-2 mt-5">
