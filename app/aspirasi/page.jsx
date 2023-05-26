@@ -111,7 +111,7 @@ export default function CustomPaginationActionsTable() {
           <TableHead>
             <TableRow>
               {columns.map((column) => (
-                <TableCell key={column.id} align={"left"} className="font-bold dark:text-slate-50">
+                <TableCell key={column.id} align={"left"} style={{ fontWeight: 900 }} className="dark:text-slate-50">
                   {column.label}
                 </TableCell>
               ))}
