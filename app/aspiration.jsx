@@ -49,6 +49,9 @@ const Aspiration = () => {
       if (response.status == 200) {
         setOpen(true);
         setAlert(response.data.message);
+        setName("");
+        setAddress("");
+        setMessage("");
       }
     } catch (error) {
       setAlert("Gagal");
