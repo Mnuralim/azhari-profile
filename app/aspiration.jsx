@@ -42,9 +42,9 @@ const Aspiration = () => {
     e.preventDefault();
     try {
       const response = await axios.post("https://colorful-calf-helmet.cyclic.app/post", {
-        name: name,
-        address: address,
-        message: message,
+        name: name.toLowerCase(),
+        address: address.toLowerCase(),
+        message: message.toLowerCase(),
       });
       if (response.status == 200) {
         setOpen(true);
