@@ -62,10 +62,6 @@ TablePaginationActions.propTypes = {
   rowsPerPage: PropTypes.number.isRequired,
 };
 
-function createData(name, calories, fat) {
-  return { name, calories, fat };
-}
-
 const columns = [
   { id: "nama", label: "Nama", minWidth: 170 },
   { id: "desa", label: "Desa/Kelurahan", minWidth: 100 },

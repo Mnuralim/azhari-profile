@@ -33,7 +33,7 @@ const Aspiration = () => {
     if (open) {
       const timer = setTimeout(() => {
         setOpen(false);
-      }, 5000);
+      }, 3000);
 
       return () => clearTimeout(timer);
     }
@@ -154,7 +154,7 @@ const Aspiration = () => {
           </motion.div>
         </div>
       </div>
-      <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+      <Snackbar open={open} autoHideDuration={5000} onClose={handleClose}>
         <Alert onClose={handleClose} severity="success" sx={{ width: "100%" }}>
           {alert} !!!
         </Alert>
