@@ -2,7 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { slideIn } from "@/utils/motion";
-import Link from "next/link";
+import { Link } from "react-scroll";
 import SendOutlinedIcon from "@mui/icons-material/SendOutlined";
 
 const About = () => {
@@ -57,7 +57,7 @@ const About = () => {
             </table>
           </div>
           <div className="w-full h-2 mt-5">
-            <Link href={"/riwayat"} className="block w-full px-4 py-3 text-center text-white bg-indigo-500 rounded">
+            <Link spy={true} smooth={true} offset={50} duration={500} to="history" className="block w-full px-4 py-3 text-center text-white bg-indigo-500 rounded cursor-pointer">
               Riwayat
               <SendOutlinedIcon className="pl-2" />
             </Link>
