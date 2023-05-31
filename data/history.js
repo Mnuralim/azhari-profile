@@ -99,3 +99,108 @@ export const studyHistory = [
     year: `lulus tahun 1989`,
   },
 ];
+
+export const organizationHistory = [
+  {
+    id: 1,
+    thumbnail: "/img/azhari.png",
+    title: "Anggota Dewan Pembina Yayasan Pembaharuan Pembangunan Pendidikan Kolaka",
+    year: `tahun 2008-sekarang`,
+  },
+  {
+    id: 2,
+    thumbnail: "/img/azhari.png",
+    title: "Ketua Ikatan Alumni STPDN Sulawesi Tenggara",
+    year: "tahun 2006-sekarang",
+  },
+  {
+    id: 3,
+    thumbnail: "/img/azhari.png",
+    title: "Pengurus KAGAMA Wilayah Sulawesi Tenggara",
+    year: `tahun 2006-sekarang`,
+  },
+  {
+    id: 4,
+    thumbnail: "/img/azhari.png",
+    title: "Wakil Ketua Dewan Pimpinan Cabang SOKSI Kab.Kolaka",
+    year: `tahun 2006-sekarang`,
+  },
+  {
+    id: 5,
+    thumbnail: "/img/azhari.png",
+    title: "Ketua Kerukunan Buton Raya Kab.Kolaka Sulawesi Tenggara",
+    year: "tahun 2007-sekarang",
+  },
+  {
+    id: 6,
+    thumbnail: "/img/azhari.png",
+    title: "Ketua Penasehat Persatuan Pekerja Muslim Seluruh Indonesia Kab.Kolaka",
+    year: `tahun 2006-sekarang`,
+  },
+  {
+    id: 7,
+    thumbnail: "/img/azhari.png",
+    title: "Anggota Dewan Pakar Bajau International Community Indonesia-Malaysia-Philippines-New Zeland",
+    year: "tahun 2008-sekarang",
+  },
+  {
+    id: 8,
+    thumbnail: "/img/azhari.png",
+    title: "Ketua Dewan Kehormatan PERBAKIN Kab.Kolaka",
+    year: `tahun 2013-2018`,
+  },
+  {
+    id: 9,
+    thumbnail: "/img/azhari.png",
+    title: "Anggota Dewan Pembina PERBAKIN Kab.Kolaka",
+    year: "Tahun 2006-2010",
+  },
+  {
+    id: 10,
+    thumbnail: "/img/azhari.png",
+    title: "Penasehat Kerukunan Keluarga Bajau Kab.Kolaka,Sulawesi Tenggara",
+    year: `tahun 2006-sekarang`,
+  },
+  {
+    id: 11,
+    thumbnail: "/img/azhari.png",
+    title: "Penasehat Kerukunan Keluarga Jawa (LANGGENG) Kab.Kolaka",
+    year: "tahun 2006-sekarang",
+  },
+  {
+    id: 12,
+    thumbnail: "/img/azhari.png",
+    title: "Ketua Majelis Pimpinan Cabang Pemuda Pancasila Kab.Kolaka",
+    year: `tahun 2006-sekarang`,
+  },
+  {
+    id: 13,
+    thumbnail: "/img/azhari.png",
+    title: "Kepala Biro Sulawesi Pos,Sulawesi Tenggara",
+    year: "tahun 2003",
+  },
+  {
+    id: 14,
+    thumbnail: "/img/azhari.png",
+    title: "PLH Redaktur Majalah “ABDIPRAJA” STPDN",
+    year: `tahun 2007-2008`,
+  },
+  {
+    id: 15,
+    thumbnail: "/img/azhari.png",
+    title: "Ketua Harian Forum Komunikasi Mahasiswa dan Alumni MAP UGM",
+    year: "tahun 2002-2006",
+  },
+  {
+    id: 16,
+    thumbnail: "/img/azhari.png",
+    title: "Ketua Badan Perwakilan Praja STPDN",
+    year: `tahun 1998`,
+  },
+  {
+    id: 17,
+    thumbnail: "/img/azhari.png",
+    title: "Ketua OSIS sejak SMP , SMA",
+    year: "",
+  },
+];

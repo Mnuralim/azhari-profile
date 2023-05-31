@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
-import { GalleryCardPhoto, GalleryCardVideo } from "./galleryCard";
-import { StudyHistory, HistoryWork } from "./fullAboutCard";
+import { GalleryCardPhoto } from "./galleryCard";
+import { StudyHistory, HistoryWork, OrganizationHistory } from "./fullAboutCard";
 
 const FullAbout = () => {
   const [activeTab, setActiveTab] = useState("photo");
@@ -14,10 +14,10 @@ const FullAbout = () => {
           </h1>
           <div className="flex p-1 mb-5 bg-slate-300/30 rounded-xl dark:bg-slate-700/30">
             <button
-              className={`transition-colors duration-300 ease-linear w-full rounded-xl ${activeTab == "photo" ? "bg-indigo-500 text-white" : "bg-transparent"}  text-sm leading-5 font-medium py-3`}
-              onClick={() => setActiveTab("photo")}
+              className={`transition-colors duration-300 ease-linear w-full rounded-xl ${activeTab == "organization" ? "bg-indigo-500 text-white" : "bg-transparent"}  text-sm leading-5 font-medium py-3`}
+              onClick={() => setActiveTab("organization")}
             >
-              Biodata
+              Riwayat <span className="block md:inline">Organisasi</span>
             </button>
 
             <button
@@ -33,7 +33,7 @@ const FullAbout = () => {
               Riwayat <span className="block md:inline">Pekerjaan</span>
             </button>
           </div>
-          {activeTab == "photo" ? <GalleryCardPhoto /> : activeTab == "studyHistory" ? <StudyHistory /> : activeTab == "workHistory" ? <HistoryWork /> : ""}
+          {activeTab == "organization" ? <OrganizationHistory /> : activeTab == "studyHistory" ? <StudyHistory /> : activeTab == "workHistory" ? <HistoryWork /> : ""}
         </div>
       </section>
     </>
