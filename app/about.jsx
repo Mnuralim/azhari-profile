@@ -29,22 +29,15 @@ const About = () => {
               <tbody>
                 <tr>
                   <td className="flex items-center pr-2 font-semibold w-28">
-                    <span className="inline-block w-24">Tempat Lahir</span> <span>:</span>
+                    <span className="inline-block w-24">Nama</span> <span>:</span>
                   </td>
-                  <td>Mawasangka, 10 Juni 1976</td>
+                  <td>Dr.Azhari,S.STP.,M.Si</td>
                 </tr>
                 <tr>
                   <td className="flex items-center pr-2 font-semibold w-28">
-                    <span className="inline-block w-24">Pendidikan</span>
-                    <span>:</span>
+                    <span className="inline-block w-24">Tempat Lahir</span> <span>:</span>
                   </td>
-                  <td>
-                    <ul>
-                      <li>Sekolah Tinggi Pemerintahan Dalam Negeri (1999)</li>
-                      <li>Magister Administrasi Publik Fisipol Universitas Gadjah Mada Yogyakarta (2003)</li>
-                      <li>Doktor Bidang Fisipol Universitas Gajah Mada Yogyakarta (2010)</li>
-                    </ul>
-                  </td>
+                  <td>Mawasangka, 10 Juni 1976</td>
                 </tr>
                 <tr>
                   <td className="flex items-center pr-2 font-semibold w-28">
@@ -52,6 +45,20 @@ const About = () => {
                     <span>:</span>
                   </td>
                   <td className="pr-2 ">Umi Noranah</td>
+                </tr>
+                <tr>
+                  <td className="flex items-center pr-2 font-semibold w-28">
+                    <span className="inline-block w-24">Anak</span>
+                    <span>:</span>
+                  </td>
+                  <td>
+                    <ul>
+                      <li>Fauziah Azhar</li>
+                      <li>Dwi Abdul Faqih Azhari</li>
+                      <li>Muh.Fadhil Azhar</li>
+                      <li>Muh.Fariz Azhari</li>
+                    </ul>
+                  </td>
                 </tr>
               </tbody>
             </table>
