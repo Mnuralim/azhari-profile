@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import PushPinOutlinedIcon from "@mui/icons-material/PushPinOutlined";
 import CalendarMonthOutlinedIcon from "@mui/icons-material/CalendarMonthOutlined";
 import { motion } from "framer-motion";
@@ -10,11 +10,17 @@ import { FullNarasi } from "./fullNarasi";
 const Narasi = () => {
   const [openModal, setOpenModal] = useState(false);
   const [currentId, setCurrentId] = useState(null);
-  if (openModal === true) {
-    document.body.style.overflow = "hidden";
-  } else {
-    document.body.style.overflow = "auto";
-  }
+  useEffect(() => {
+    const handleBodyOverflow = () => {
+      document.body.style.overflow = openModal ? "hidden" : "auto";
+    };
+
+    handleBodyOverflow();
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [openModal]);
   const handleOpenModal = (id) => {
     setCurrentId(id);
     setOpenModal(true);
