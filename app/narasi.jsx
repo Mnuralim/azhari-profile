@@ -35,8 +35,10 @@ const Narasi = () => {
         <h1 className="mt-10 mb-5 text-4xl font-bold text-center lg:mt-24 lg:text-5xl">Narasi</h1>
         <motion.div variants={galleryContainerVariant} initial="hidden" whileInView="show" className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
           {narasi.map((data) => (
-            <motion.div key={data.id} variants={galleryVariant} className="w-full p-2 rounded-xl bg-slate-300/50 dark:bg-slate-700/50">
-              <div style={{ backgroundImage: `url('${data.thumbnail}')`, backgroundSize: "cover", backgroundRepeat: "no-repeat" }} className="w-full min-h-[250px] rounded-md"></div>
+            <motion.div key={data.id} variants={galleryVariant} className=" w-full p-2 rounded-xl bg-slate-300/50 dark:bg-slate-700/50 ">
+              <div className="overflow-hidden">
+                <img src={data.thumbnail} alt="" className="hover:scale-110  transition-all ease-in-out duration-300 " />
+              </div>
               <div className="flex gap-4 mt-3 text-sm text-slate-500 dark:text-slate-300">
                 <div>
                   <PushPinOutlinedIcon fontSize="small" />

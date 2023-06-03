@@ -64,37 +64,37 @@ export const historyWork = [
 export const studyHistory = [
   {
     id: 1,
-    thumbnail: "/img/azhari.png",
+    thumbnail: "/img/home1.jpeg",
     title: "Doktor Bidang Fisipol Universitas Gajah Mada Yogyakarta (UGM)",
     year: `lulus tahun 2010`,
   },
   {
     id: 2,
-    thumbnail: "/img/azhari.png",
+    thumbnail: "/img/home1.jpeg",
     title: "Magister Administrasi Publik Fisipol Universitas Gadjah Mada Yogyakarta (UGM)",
     year: "lulus tahun 2003",
   },
   {
     id: 3,
-    thumbnail: "/img/azhari.png",
+    thumbnail: "/img/home1.jpeg",
     title: "Sekolah Tinggi Pemerintahan Dalam Negeri (STPDN)",
     year: `lulus tahun 1999`,
   },
   {
     id: 4,
-    thumbnail: "/img/azhari.png",
+    thumbnail: "/img/home1.jpeg",
     title: "SMA Negeri 1 Mawasangka",
     year: `lulus tahun 1995`,
   },
   {
     id: 5,
-    thumbnail: "/img/azhari.png",
+    thumbnail: "/img/home1.jpeg",
     title: "SMP Negeri 1 Mawasangka",
     year: "lulus tahun 1992",
   },
   {
     id: 6,
-    thumbnail: "/img/azhari.png",
+    thumbnail: "/img/home1.jpeg",
     title: "SD Negeri 4 Mawasangka",
     year: `lulus tahun 1989`,
   },
