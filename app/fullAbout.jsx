@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import { GalleryCardPhoto } from "./galleryCard";
 import { StudyHistory, HistoryWork, OrganizationHistory } from "./fullAboutCard";
 
 const FullAbout = () => {

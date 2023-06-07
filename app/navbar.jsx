@@ -59,7 +59,11 @@ const Navbar = () => {
               Narasi
             </Link>
           </div>
-
+          <div>
+            <Link to="achive" spy={true} smooth={true} offset={50} duration={500} className="cursor-pointer text-slate-500 hover:text-indigo-500 dark:hover:text-indigo-500 dark:text-slate-50">
+              Pencapaian
+            </Link>
+          </div>
           <div>
             <Link spy={true} smooth={true} offset={50} duration={500} to="gallery" className="cursor-pointer text-slate-500 hover:text-indigo-500 dark:hover:text-indigo-500 dark:text-slate-50">
               Galeri
@@ -68,11 +72,6 @@ const Navbar = () => {
           <div>
             <Link spy={true} smooth={true} offset={50} duration={500} to="contact" className="cursor-pointer text-slate-500 hover:text-indigo-500 dark:hover:text-indigo-500 dark:text-slate-50">
               Aspirasi
-            </Link>
-          </div>
-          <div>
-            <Link to="" className="cursor-pointer text-slate-500 hover:text-indigo-500 dark:hover:text-indigo-500 dark:text-slate-50">
-              Komunitas
             </Link>
           </div>
         </div>
@@ -105,7 +104,7 @@ const Navbar = () => {
       <Link spy={true} smooth={true} offset={50} duration={500} to="contact">
         <CallOutlinedIcon className="cursor-pointer text-black/75 hover:text-indigo-500 dark:text-slate-50" />
       </Link>
-      <Link spy={true} smooth={true} offset={50} duration={500} to="contact">
+      <Link spy={true} smooth={true} offset={50} duration={500} to="achive">
         <PeopleRoundedIcon className="cursor-pointer text-black/75 hover:text-indigo-500 dark:text-slate-50" />
       </Link>
     </motion.nav>

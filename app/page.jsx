@@ -4,6 +4,7 @@ import Narasi from "./narasi";
 import Aspiration from "./aspiration";
 import Gallery from "./gallery";
 import FullAbout from "./fullAbout";
+import Achievement from "./achievement";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <About />
       <FullAbout />
       <Narasi />
+      <Achievement />
       <Gallery />
       <Aspiration />
     </main>
