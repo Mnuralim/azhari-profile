@@ -96,6 +96,9 @@ const Navbar = () => {
         <PersonOutlineOutlinedIcon className="cursor-pointer text-black/75 hover:text-indigo-500 dark:text-slate-50" />
       </Link>
       <Link spy={true} smooth={true} offset={50} duration={500} to="narasi">
+        <PeopleRoundedIcon className="cursor-pointer text-black/75 hover:text-indigo-500 dark:text-slate-50" />
+      </Link>
+      <Link spy={true} smooth={true} offset={50} duration={500} to="achive">
         <EmojiEventsOutlinedIcon className="cursor-pointer text-black/75 hover:text-indigo-500 dark:text-slate-50" />
       </Link>
       <Link spy={true} smooth={true} offset={50} duration={500} to="gallery">
@@ -103,9 +106,6 @@ const Navbar = () => {
       </Link>
       <Link spy={true} smooth={true} offset={50} duration={500} to="contact">
         <CallOutlinedIcon className="cursor-pointer text-black/75 hover:text-indigo-500 dark:text-slate-50" />
-      </Link>
-      <Link spy={true} smooth={true} offset={50} duration={500} to="achive">
-        <PeopleRoundedIcon className="cursor-pointer text-black/75 hover:text-indigo-500 dark:text-slate-50" />
       </Link>
     </motion.nav>
   );
