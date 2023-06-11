@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import { StudyHistory, HistoryWork, OrganizationHistory } from "./fullAboutCard";
 import { Ilmiah, Penghargaan } from "./fullAchive";
 
 const Achievement = () => {
@@ -24,6 +23,9 @@ const Achievement = () => {
               onClick={() => setActiveTab("ilmiah")}
             >
               Publikasi <span className="block md:inline">Ilmiah</span>
+            </button>
+            <button className={`transition-colors duration-300 ease-linear w-full rounded-xl ${activeTab == "buku" ? "bg-indigo-500 text-white" : "bg-transparent"}  text-sm leading-5 font-medium py-3`} onClick={() => setActiveTab("buku")}>
+              Buku <span className="block md:inline"></span>
             </button>
           </div>
           {activeTab == "penghargaan" ? <Penghargaan /> : activeTab == "ilmiah" ? <Ilmiah /> : ""}
