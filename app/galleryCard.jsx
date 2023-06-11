@@ -29,7 +29,7 @@ export const GalleryCardVideo = () => {
           <motion.div variants={galleryVariant} key={data.id}>
             <h2 className="my-3 text-lg font-semibold text-slate-700 dark:text-slate-50">{data.title}</h2>
             <div className="w-full p-2 transition-colors duration-200 ease-in-out border border-slate-400 hover:bg-slate-400 dark:hover:bg-slate-400 dark:border-slate-400">
-              <iframe width="100%" height="315" src={data.url} title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+              <iframe width="100%" height="315" loading="lazy" src={data.url} title="YouTube video player" frameborder="0" allowfullscreen></iframe>
             </div>
           </motion.div>
         ))}
