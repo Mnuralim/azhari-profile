@@ -38,7 +38,7 @@ export const Ilmiah = () => {
           <thead>
             <tr>
               <th className="px-3 py-2 border border-slate-700 dark:border-slate-50">No</th>
-              <th className="px-3 py-2 border border-slate-700 dark:border-slate-50">Penghargaan</th>
+              <th className="px-3 py-2 border border-slate-700 dark:border-slate-50">Publikasi Ilmiah</th>
               <th className="px-3 py-2 border border-slate-700 dark:border-slate-50">Tahun</th>
             </tr>
           </thead>

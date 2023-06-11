@@ -14,6 +14,16 @@ export const galleryVideo = [
     title: "Kepemimpinan & Kekuasaan",
     url: "https://www.youtube.com/embed/kf5Q-qL7_q0",
   },
+  {
+    id: "4",
+    title: "Syekh Muhammad Jaber ada di kediaman Rektor USN Kolaka",
+    url: "https://www.youtube.com/embed/3qrI_NtcPP8",
+  },
+  {
+    id: "5",
+    title: "Rektor USN Kolaka Turun ke Jalan Bagikan Hand Sanitizer",
+    url: "https://www.youtube.com/embed/qBPjL3axITw",
+  },
 ];
 
 export const galleryPhoto = [
