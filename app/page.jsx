@@ -12,8 +12,8 @@ export default function Home() {
       <HomePage />
       <About />
       <FullAbout />
-      <Narasi />
       <Achievement />
+      <Narasi />
       <Gallery />
       <Aspiration />
     </main>

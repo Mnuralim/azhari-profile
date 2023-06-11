@@ -55,15 +55,16 @@ const Navbar = () => {
             </Link>
           </div>
           <div>
-            <Link spy={true} smooth={true} offset={50} duration={500} to="narasi" className="cursor-pointer text-slate-500 hover:text-indigo-500 dark:hover:text-indigo-500 dark:text-slate-50">
-              Narasi
-            </Link>
-          </div>
-          <div>
             <Link to="achive" spy={true} smooth={true} offset={50} duration={500} className="cursor-pointer text-slate-500 hover:text-indigo-500 dark:hover:text-indigo-500 dark:text-slate-50">
               Pencapaian
             </Link>
           </div>
+          <div>
+            <Link spy={true} smooth={true} offset={50} duration={500} to="narasi" className="cursor-pointer text-slate-500 hover:text-indigo-500 dark:hover:text-indigo-500 dark:text-slate-50">
+              Narasi
+            </Link>
+          </div>
+
           <div>
             <Link spy={true} smooth={true} offset={50} duration={500} to="gallery" className="cursor-pointer text-slate-500 hover:text-indigo-500 dark:hover:text-indigo-500 dark:text-slate-50">
               Galeri
@@ -95,11 +96,11 @@ const Navbar = () => {
       <Link spy={true} smooth={true} offset={50} duration={500} to="about">
         <PersonOutlineOutlinedIcon className="cursor-pointer text-black/75 hover:text-indigo-500 dark:text-slate-50" />
       </Link>
-      <Link spy={true} smooth={true} offset={50} duration={500} to="narasi">
-        <PeopleRoundedIcon className="cursor-pointer text-black/75 hover:text-indigo-500 dark:text-slate-50" />
-      </Link>
       <Link spy={true} smooth={true} offset={50} duration={500} to="achive">
         <EmojiEventsOutlinedIcon className="cursor-pointer text-black/75 hover:text-indigo-500 dark:text-slate-50" />
+      </Link>
+      <Link spy={true} smooth={true} offset={50} duration={500} to="narasi">
+        <PeopleRoundedIcon className="cursor-pointer text-black/75 hover:text-indigo-500 dark:text-slate-50" />
       </Link>
       <Link spy={true} smooth={true} offset={50} duration={500} to="gallery">
         <CollectionsOutlinedIcon className="cursor-pointer text-black/75 hover:text-indigo-500 dark:text-slate-50" />
