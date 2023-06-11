@@ -5,7 +5,7 @@ import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined
 import CallOutlinedIcon from "@mui/icons-material/CallOutlined";
 import EmojiEventsOutlinedIcon from "@mui/icons-material/EmojiEventsOutlined";
 import CollectionsOutlinedIcon from "@mui/icons-material/CollectionsOutlined";
-import PeopleRoundedIcon from "@mui/icons-material/PeopleRounded";
+import EmojiObjectsOutlinedIcon from "@mui/icons-material/EmojiObjectsOutlined";
 import { Link } from "react-scroll";
 import NextLink from "next/link";
 import { motion } from "framer-motion";
@@ -100,7 +100,7 @@ const Navbar = () => {
         <EmojiEventsOutlinedIcon className="cursor-pointer text-black/75 hover:text-indigo-500 dark:text-slate-50" />
       </Link>
       <Link spy={true} smooth={true} offset={50} duration={500} to="narasi">
-        <PeopleRoundedIcon className="cursor-pointer text-black/75 hover:text-indigo-500 dark:text-slate-50" />
+        <EmojiObjectsOutlinedIcon className="cursor-pointer text-black/75 hover:text-indigo-500 dark:text-slate-50" />
       </Link>
       <Link spy={true} smooth={true} offset={50} duration={500} to="gallery">
         <CollectionsOutlinedIcon className="cursor-pointer text-black/75 hover:text-indigo-500 dark:text-slate-50" />
