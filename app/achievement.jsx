@@ -1,9 +1,30 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Ilmiah, Penghargaan } from "./fullAchive";
 
 const Achievement = () => {
   const [activeTab, setActiveTab] = useState("penghargaan");
+  const [achiev, setAchiev] = useState([]);
+  const [ilmiah, setIlmiah] = useState([]);
+
+  useEffect(() => {
+    const getData = async () => {
+      const res = await fetch("https://colorful-calf-helmet.cyclic.app/get-achiev");
+      const allData = await res.json();
+      setAchiev(allData);
+    };
+    getData();
+  }, []);
+
+  useEffect(() => {
+    const getData = async () => {
+      const res = await fetch("https://colorful-calf-helmet.cyclic.app/get-ilmiah");
+      const allData = await res.json();
+      setIlmiah(allData);
+    };
+    getData();
+  }, []);
+
   return (
     <>
       <section id="achive" className="relative flex items-center min-h-screen p-5 mt-10 lg:mt-20">
@@ -28,7 +49,7 @@ const Achievement = () => {
               Buku <span className="block md:inline"></span>
             </button>
           </div>
-          {activeTab == "penghargaan" ? <Penghargaan /> : activeTab == "ilmiah" ? <Ilmiah /> : ""}
+          {activeTab == "penghargaan" ? <Penghargaan achiev={achiev} /> : activeTab == "ilmiah" ? <Ilmiah ilmiah={ilmiah} /> : ""}
         </div>
       </section>
     </>

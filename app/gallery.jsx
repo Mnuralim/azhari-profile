@@ -1,9 +1,29 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { GalleryCardPhoto, GalleryCardVideo } from "./galleryCard";
 
 const Gallery = () => {
   const [activeTab, setActiveTab] = useState("photo");
+  const [photo, setPhoto] = useState([]);
+  const [video, setVideo] = useState([]);
+
+  useEffect(() => {
+    const getAllData = async () => {
+      const res = await fetch("https://colorful-calf-helmet.cyclic.app/get-gallery-photo");
+      const getData = await res.json();
+      setPhoto(getData);
+    };
+    getAllData();
+  }, []);
+
+  useEffect(() => {
+    const getAllData = async () => {
+      const res = await fetch("https://colorful-calf-helmet.cyclic.app/get-gallery-video");
+      const getData = await res.json();
+      setVideo(getData);
+    };
+    getAllData();
+  }, []);
   return (
     <>
       <section id="gallery" className="relative min-h-screen flex items-center p-5 mt-10 lg:mt-20">
@@ -26,7 +46,7 @@ const Gallery = () => {
               Video
             </button>
           </div>
-          {activeTab == "photo" ? <GalleryCardPhoto /> : activeTab == "video" ? <GalleryCardVideo /> : ""}
+          {activeTab == "photo" ? <GalleryCardPhoto photo={photo} /> : activeTab == "video" ? <GalleryCardVideo video={video} /> : ""}
         </div>
       </section>
     </>

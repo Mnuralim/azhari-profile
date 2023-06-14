@@ -1,9 +1,38 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { StudyHistory, HistoryWork, OrganizationHistory } from "./fullAboutCard";
+import axios from "axios";
 
 const FullAbout = () => {
   const [activeTab, setActiveTab] = useState("workHistory");
+  const [dataWork, setDataWork] = useState([]);
+  const [dataOrganization, setDataOrganization] = useState([]);
+  const [dataStudy, setDataStudy] = useState([]);
+
+  useEffect(() => {
+    const getAllData = async () => {
+      const getData = await axios.get("https://colorful-calf-helmet.cyclic.app/get-workhistory");
+      setDataWork(getData.data);
+    };
+    getAllData();
+  }, []);
+
+  useEffect(() => {
+    const getAllData = async () => {
+      const getData = await axios.get("https://colorful-calf-helmet.cyclic.app/get-study");
+      setDataStudy(getData.data);
+    };
+    getAllData();
+  }, []);
+
+  useEffect(() => {
+    const getAllData = async () => {
+      const getData = await axios.get("https://colorful-calf-helmet.cyclic.app/get-organization");
+      setDataOrganization(getData.data);
+    };
+    getAllData();
+  }, []);
+
   return (
     <>
       <section id="history" className="relative flex items-center min-h-screen p-5 mt-10 lg:mt-20">
@@ -32,7 +61,15 @@ const FullAbout = () => {
               Riwayat <span className="block md:inline">Pendidikan</span>
             </button>
           </div>
-          {activeTab == "organization" ? <OrganizationHistory /> : activeTab == "studyHistory" ? <StudyHistory /> : activeTab == "workHistory" ? <HistoryWork /> : ""}
+          {activeTab == "organization" ? (
+            <OrganizationHistory dataOrganization={dataOrganization} />
+          ) : activeTab == "studyHistory" ? (
+            <StudyHistory dataStudy={dataStudy} />
+          ) : activeTab == "workHistory" ? (
+            <HistoryWork dataWork={dataWork} />
+          ) : (
+            ""
+          )}
         </div>
       </section>
     </>

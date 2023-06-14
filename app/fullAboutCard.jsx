@@ -5,16 +5,7 @@ import { motion } from "framer-motion";
 import { galleryContainerVariant, galleryVariant } from "@/utils/motion";
 import axios from "axios";
 
-export const HistoryWork = () => {
-  const [dataWork, setDataWork] = useState([]);
-  useEffect(() => {
-    const getAllData = async () => {
-      const getData = await axios.get("https://colorful-calf-helmet.cyclic.app/get-workhistory");
-      setDataWork(getData.data);
-    };
-    getAllData();
-  }, []);
-
+export const HistoryWork = ({ dataWork }) => {
   return (
     <section id="history" className="relative flex items-center justify-center min-h-screen p-5 mt-10 lg:px-16 lg:mt-20 ">
       <motion.div variants={galleryContainerVariant} initial="hidden" whileInView="show">
@@ -39,15 +30,7 @@ export const HistoryWork = () => {
   );
 };
 
-export const StudyHistory = () => {
-  const [dataStudy, setDataStudy] = useState([]);
-  useEffect(() => {
-    const getAllData = async () => {
-      const getData = await axios.get("https://colorful-calf-helmet.cyclic.app/get-study");
-      setDataStudy(getData.data);
-    };
-    getAllData();
-  }, []);
+export const StudyHistory = ({ dataStudy }) => {
   return (
     <section id="history" className="relative flex items-center justify-center min-h-screen p-5 mt-10 lg:px-16 lg:mt-20 ">
       <motion.div variants={galleryContainerVariant} initial="hidden" whileInView="show">
@@ -72,15 +55,7 @@ export const StudyHistory = () => {
   );
 };
 
-export const OrganizationHistory = () => {
-  const [dataOrganization, setDataOrganization] = useState([]);
-  useEffect(() => {
-    const getAllData = async () => {
-      const getData = await axios.get("https://colorful-calf-helmet.cyclic.app/get-organization");
-      setDataOrganization(getData.data);
-    };
-    getAllData();
-  }, []);
+export const OrganizationHistory = ({ dataOrganization }) => {
   return (
     <section id="history" className="relative flex items-center justify-center min-h-screen p-5 mt-10 lg:px-16 lg:mt-20 ">
       <motion.div variants={galleryContainerVariant} initial="hidden" whileInView="show">

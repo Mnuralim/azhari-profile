@@ -1,19 +1,10 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import { galleryContainerVariant, galleryVariant } from "@/utils/motion";
 import { galleryPhoto, galleryVideo } from "@/data/gallery";
-import axios from "axios";
 
-export const GalleryCardPhoto = () => {
-  const [photo, setPhoto] = useState([]);
-  useEffect(() => {
-    const getAllData = async () => {
-      const getData = await axios.get("https://colorful-calf-helmet.cyclic.app/get-gallery-photo");
-      setPhoto(getData.data);
-    };
-    getAllData();
-  }, []);
+export const GalleryCardPhoto = ({ photo }) => {
   return (
     <div>
       <motion.div variants={galleryContainerVariant} initial="hidden" whileInView="show" className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
@@ -30,15 +21,7 @@ export const GalleryCardPhoto = () => {
   );
 };
 
-export const GalleryCardVideo = () => {
-  const [video, setVideo] = useState([]);
-  useEffect(() => {
-    const getAllData = async () => {
-      const getData = await axios.get("https://colorful-calf-helmet.cyclic.app/get-gallery-video");
-      setVideo(getData.data);
-    };
-    getAllData();
-  }, []);
+export const GalleryCardVideo = ({ video }) => {
   return (
     <div>
       <motion.div variants={galleryContainerVariant} initial="hidden" whileInView="show" className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-2">
