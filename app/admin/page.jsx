@@ -63,8 +63,8 @@ const Admin = () => {
                   </td>
                 </tr>
                 <tr>
-                  <td className="py-2 text-center border border-slate-700 dark:border-slate-50">6</td>
-                  <td className="px-2 py-2 text-center border border-slate-700 dark:border-slate-50">Galeri</td>
+                  <td className="py-2 text-center border border-slate-700 dark:border-slate-50">7</td>
+                  <td className="px-2 py-2 text-center border border-slate-700 dark:border-slate-50">Aspirasi</td>
                   <td className="px-3 py-2 text-center border border-slate-700 dark:border-slate-50">
                     <Link href={"/admin/aspirasi"}>Lihat</Link>
                   </td>
