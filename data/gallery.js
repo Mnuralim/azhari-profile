@@ -42,4 +42,9 @@ export const galleryPhoto = [
     title: "Kamomose Masyarakat Lakudo",
     url: "/img/galeri3.jpg",
   },
+  {
+    id: "4",
+    title: "Dewan Pengurus IKAPTK SULTRA",
+    url: "/img/IKAPTK.jpeg",
+  },
 ];

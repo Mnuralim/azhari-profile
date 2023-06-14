@@ -1,8 +1,5 @@
 "use client";
 import React, { useState, forwardRef, useEffect } from "react";
-import CallOutlinedIcon from "@mui/icons-material/CallOutlined";
-import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
-import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import SendOutlinedIcon from "@mui/icons-material/SendOutlined";
 import { motion } from "framer-motion";
 import { slideIn } from "@/utils/motion";
@@ -14,10 +11,11 @@ const Alert = forwardRef(function Alert(props, ref) {
   return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
 });
 
-const Aspiration = () => {
+const Beranda = () => {
   const [name, setName] = useState("");
-  const [address, setAddress] = useState("");
-  const [message, setMessage] = useState("");
+  const [position, setPosition] = useState("");
+  const [description, setDescription] = useState("");
+  const [image, setImage] = useState(null);
   const [alert, setAlert] = useState("");
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -29,6 +27,17 @@ const Aspiration = () => {
 
     setOpen(false);
   };
+
+  useEffect(() => {
+    const getData = async () => {
+      const res = await axios.get(`https://colorful-calf-helmet.cyclic.app/get-beranda/`);
+      setName(res.data[0].name);
+      setPosition(res.data[0].position);
+      setDescription(res.data[0].description);
+      setImage(res.data[0].image);
+    };
+    getData();
+  }, []);
   useEffect(() => {
     if (open) {
       const timer = setTimeout(() => {
@@ -42,19 +51,22 @@ const Aspiration = () => {
   const handleForm = async (e) => {
     e.preventDefault();
     setLoading(true);
+
     try {
-      const response = await axios.post("https://colorful-calf-helmet.cyclic.app/post", {
-        name: name.toLowerCase(),
-        address: address.toLowerCase(),
-        message: message.toLowerCase(),
-      });
+      const formData = new FormData();
+      formData.append("name", name);
+      formData.append("position", position);
+      formData.append("description", description);
+      formData.append("image", image);
+      const response = await axios.put("https://colorful-calf-helmet.cyclic.app/update-beranda/6487068497e7e6d831dba22e", formData);
       if (response.status == 200) {
         setLoading(false);
         setOpen(true);
-        setAlert(response.data.message);
+        setAlert("Sukses");
         setName("");
-        setAddress("");
-        setMessage("");
+        setPosition("");
+        setImage(null);
+        setDescription("");
       }
     } catch (error) {
       setAlert("Gagal");
@@ -65,50 +77,19 @@ const Aspiration = () => {
     <section className="relative flex items-center min-h-screen mt-10 mb-20 lg:mt-20" id="contact">
       <div className="w-full">
         <h1 className="mt-16 text-4xl font-bold text-center lg:text-5xl">
-          Aspirasi <span className="text-indigo-500">Masyarakat</span>
+          Edit <span className="text-indigo-500">Beranda</span>
         </h1>
         <div className="flex flex-col items-center justify-center mt-10 lg:flex-row lg:gap-10">
-          <motion.div variants={slideIn("left", "tween", 0.5, 1)} initial="hidden" whileInView="show" className="flex flex-col items-center justify-center w-11/12 p-10 bg-white shadow-md rounded-xl lg:w-2/6 dark:bg-slate-700">
-            <motion.div className="flex flex-col justify-center gap-5">
-              <div className="flex gap-4">
-                <div>
-                  <CallOutlinedIcon className="text-indigo-400" />
-                </div>
-                <div>
-                  <h1 className="font-medium text-slate-600 md:text-lg dark:text-slate-50 ">Telepon</h1>
-                  <p className="text-sm text-slate-500 dark:text-slate-400">+62-858-6525-7441</p>
-                </div>
-              </div>
-              <div className="flex gap-4">
-                <div>
-                  <EmailOutlinedIcon className="text-indigo-400" />
-                </div>
-                <div>
-                  <h1 className="font-medium text-slate-600 md:text-lg dark:text-slate-50 ">Email</h1>
-                  <p className="text-sm text-slate-500 dark:text-slate-400">azhari@gmail.com</p>
-                </div>
-              </div>
-              <div className="flex gap-4">
-                <div>
-                  <LocationOnOutlinedIcon className="text-indigo-400" />
-                </div>
-                <div>
-                  <h1 className="font-medium text-slate-600 md:text-lg dark:text-slate-50 ">Lokasi</h1>
-                  <p className="text-sm text-slate-500 dark:text-slate-400">Buton Tengah - Sulawesi Tenggara - Indonesia</p>
-                </div>
-              </div>
-            </motion.div>
-          </motion.div>
           <motion.div variants={slideIn("right", "tween", 0.5, 1)} initial="hidden" whileInView="show" className="w-3/4 py-10 mt-10 bg-white shadow-md px-7 rounded-xl md:mt-5 lg:w-1/3 dark:bg-slate-700">
             <form onSubmit={handleForm} className="flex flex-col items-center justify-center gap-3">
               <div className="w-full">
                 <label className="text-slate-500 md:text-lg dark:text-slate-200" htmlFor="name">
-                  Nama :
+                  Nama dan Gelar :
                 </label>
                 <input
                   className="block w-full px-2 py-1 mt-2 text-sm rounded-md outline-none bg-slate-100 md:text-base dark:bg-slate-500"
                   type="text"
-                  placeholder="Nama"
+                  placeholder="Nama dan Gelar"
                   id="name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
@@ -116,31 +97,37 @@ const Aspiration = () => {
                 />
               </div>
               <div className="w-full">
-                <label className="text-slate-500 md:text-lg dark:text-slate-200" htmlFor="alamat">
-                  Desa/Kelurahan :
+                <label className="text-slate-500 md:text-lg dark:text-slate-200" htmlFor="position">
+                  Jabatan :
                 </label>
                 <input
                   className="block w-full px-2 py-1 mt-2 text-sm rounded-md outline-none bg-slate-100 md:text-base dark:bg-slate-500"
                   type="text"
-                  placeholder="Desa/Kelurahan"
-                  id="alamat"
-                  value={address}
-                  onChange={(e) => setAddress(e.target.value)}
+                  placeholder="Jabatan"
+                  id="position"
+                  value={position}
+                  onChange={(e) => setPosition(e.target.value)}
                   required
                 />
               </div>
               <div className="w-full">
-                <label className="text-slate-500 md:text-lg dark:text-slate-200" htmlFor="message">
-                  Aspirasi :
+                <label className="text-slate-500 md:text-lg dark:text-slate-200" htmlFor="gambar">
+                  Gambar :
+                </label>
+                <input className="block w-full px-2 py-1 mt-2 text-sm rounded-md outline-none bg-slate-100 md:text-base dark:bg-slate-500" type="file" placeholder="gambar" id="gambar" onChange={(e) => setImage(e.target.files[0])} />
+              </div>
+              <div className="w-full">
+                <label className="text-slate-500 md:text-lg dark:text-slate-200" htmlFor="deskripsi">
+                  Deskripsi :
                 </label>
                 <textarea
-                  name="message"
-                  id="message"
+                  name="deskripsi"
+                  id="deskripsi"
                   rows="4"
-                  placeholder="Pesanmu..."
+                  placeholder="Deskripsi..."
                   className="block w-full px-2 py-1 mt-2 text-sm rounded-md outline-none resize-none bg-slate-100 md:text-base dark:bg-slate-500"
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
+                  value={description}
+                  onChange={(e) => setDescription(e.target.value)}
                   required
                 ></textarea>
               </div>
@@ -163,4 +150,4 @@ const Aspiration = () => {
   );
 };
 
-export default Aspiration;
+export default Beranda;
