@@ -9,15 +9,17 @@ export const FullNarasi = ({ isOpen, onClose, data }) => {
   if (!isOpen) return null;
 
   const [dataNarasi, setDataNarasi] = useState("");
+  const [narasiArticle, setNarasiArticle] = useState("");
   useEffect(() => {
     const getAllData = async () => {
       const getData = await axios.get(`https://colorful-calf-helmet.cyclic.app/get-narasi/${data}`);
       setDataNarasi(getData.data);
+      setNarasiArticle(getData.data.article);
     };
     getAllData();
   }, []);
 
-  const words = dataNarasi.article.split(" ");
+  const words = narasiArticle.split(" ");
   const subtitle = words.slice(0, 45).join(" ");
   const content = words.slice(45).join(" ");
 
