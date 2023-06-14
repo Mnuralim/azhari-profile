@@ -96,7 +96,7 @@ export default function CustomPaginationActionsTable() {
   };
 
   return (
-    <section className="mt-20 overflow-x-hiddenbg-slate-50 dark:bg-slate-800 dark:text-slate-50">
+    <section className="mt-20 overflow-x-hiddenbg-slate-50 dark:bg-slate-800 dark:text-slate-50 md:mx-10">
       <div>
         <h1 className="mb-10 text-4xl font-bold text-center mt-14 text-slate-700 lg:text-5xl lg:mt-24 dark:text-slate-50">
           Daftar <span className="text-indigo-500">Aspirasi</span>
