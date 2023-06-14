@@ -1,16 +1,41 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { slideIn } from "@/utils/motion";
 import { Link } from "react-scroll";
 import SendOutlinedIcon from "@mui/icons-material/SendOutlined";
+import axios from "axios";
 
 const About = () => {
+  const [name, setName] = useState("");
+  const [birth, setBirth] = useState("");
+  const [wife, setWife] = useState("");
+  const [firstchild, setFirstchild] = useState("");
+  const [secondchild, setSecondchild] = useState("");
+  const [thirdchild, setThirdchild] = useState("");
+  const [fourthchild, setFourthchild] = useState("");
+  const [imageAbout, setImageAbout] = useState("");
+
+  useEffect(() => {
+    const getAllData = async () => {
+      const getData = await axios.get("https://colorful-calf-helmet.cyclic.app/get-about");
+      setName(getData.data[0].name);
+      setBirth(getData.data[0].birt);
+      setWife(getData.data[0].wifeName);
+      setFirstchild(getData.data[0].firstchild);
+      setSecondchild(getData.data[0].secondchild);
+      setThirdchild(getData.data[0].thirdchild);
+      setFourthchild(getData.data[0].fourthchild);
+      setImageAbout(getData.data[0].images);
+    };
+    getAllData();
+  }, []);
+
   return (
     <section id="about" className="relative flex items-center justify-center min-h-screen p-5 mt-10 lg:px-16 lg:mt-20">
       <div className="relative z-50 flex flex-col items-center justify-center mt-5 lg:flex-row lg:gap-48 ">
         <motion.div variants={slideIn("left", "tween", 0.5, 1.5)} initial="hidden" whileInView="show" className="mr-5 rounded-lg opacity-100 lg:h-[600px] lg:w-[410px]">
-          <img src={"/img/about1.png"} className="w-full h-full mx-auto my-auto rounded-b-full" />
+          <img src={imageAbout} className="w-full h-full mx-auto my-auto rounded-b-full" />
         </motion.div>
         <motion.div variants={slideIn("right", "tween", 0.5, 1.5)} initial="hidden" whileInView="show">
           <h1 className="text-4xl font-bold text-center mt-10 mb-5 text-slate-700 lg:text-5xl lg:text-left dark:text-slate-50">
@@ -29,20 +54,20 @@ const About = () => {
                   <td className="flex items-center pr-2 font-semibold w-28">
                     <span className="inline-block w-24">Nama</span> <span>:</span>
                   </td>
-                  <td>Dr.Azhari,S.STP.,M.Si</td>
+                  <td>{name}</td>
                 </tr>
                 <tr>
                   <td className="flex items-center pr-2 font-semibold w-28">
                     <span className="inline-block w-24">Tempat Lahir</span> <span>:</span>
                   </td>
-                  <td>Mawasangka, 10 Juni 1976</td>
+                  <td>{birth}</td>
                 </tr>
                 <tr>
                   <td className="flex items-center pr-2 font-semibold w-28">
                     <span className="inline-block w-24">Istri</span>
                     <span>:</span>
                   </td>
-                  <td className="pr-2 ">Umi Noranah</td>
+                  <td className="pr-2 ">{wife}</td>
                 </tr>
                 <tr>
                   <td className="flex items-center pr-2 font-semibold w-28">
@@ -51,10 +76,10 @@ const About = () => {
                   </td>
                   <td>
                     <ul>
-                      <li>Fauziah Azhar</li>
-                      <li>Dwi Abdul Faqih Azhari</li>
-                      <li>Muh.Fadhil Azhar</li>
-                      <li>Muh.Fariz Azhari</li>
+                      <li>{firstchild}</li>
+                      <li>{secondchild}</li>
+                      <li>{thirdchild}</li>
+                      <li>{fourthchild}</li>
                     </ul>
                   </td>
                 </tr>

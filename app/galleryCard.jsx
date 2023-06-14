@@ -1,18 +1,27 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { galleryContainerVariant, galleryVariant } from "@/utils/motion";
 import { galleryPhoto, galleryVideo } from "@/data/gallery";
+import axios from "axios";
 
 export const GalleryCardPhoto = () => {
+  const [photo, setPhoto] = useState([]);
+  useEffect(() => {
+    const getAllData = async () => {
+      const getData = await axios.get("https://colorful-calf-helmet.cyclic.app/get-gallery-photo");
+      setPhoto(getData.data);
+    };
+    getAllData();
+  }, []);
   return (
     <div>
       <motion.div variants={galleryContainerVariant} initial="hidden" whileInView="show" className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-        {galleryPhoto.map((data) => (
-          <motion.div variants={galleryVariant} key={data.id}>
+        {photo.map((data) => (
+          <motion.div variants={galleryVariant} key={data._id}>
             <h2 className="my-3 text-lg font-semibold text-slate-700 dark:text-slate-50">{data.title}</h2>
             <div className="w-full p-2 transition-colors duration-200 ease-in-out border border-slate-400 hover:bg-slate-400 dark:hover:bg-slate-400 dark:border-slate-400">
-              <div style={{ backgroundImage: `url(${data.url})`, backgroundSize: "cover", backgroundRepeat: "no-repeat" }} className="w-full min-h-[250px] "></div>
+              <div style={{ backgroundImage: `url(${data.image})`, backgroundSize: "cover", backgroundRepeat: "no-repeat" }} className="w-full min-h-[250px] "></div>
             </div>
           </motion.div>
         ))}
@@ -22,11 +31,19 @@ export const GalleryCardPhoto = () => {
 };
 
 export const GalleryCardVideo = () => {
+  const [video, setVideo] = useState([]);
+  useEffect(() => {
+    const getAllData = async () => {
+      const getData = await axios.get("https://colorful-calf-helmet.cyclic.app/get-gallery-video");
+      setVideo(getData.data);
+    };
+    getAllData();
+  }, []);
   return (
     <div>
       <motion.div variants={galleryContainerVariant} initial="hidden" whileInView="show" className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-2">
-        {galleryVideo.map((data) => (
-          <motion.div variants={galleryVariant} key={data.id}>
+        {video.map((data) => (
+          <motion.div variants={galleryVariant} key={data._id}>
             <h2 className="my-3 text-lg font-semibold text-slate-700 dark:text-slate-50">{data.title}</h2>
             <div className="w-full p-2 transition-colors duration-200 ease-in-out border border-slate-400 hover:bg-slate-400 dark:hover:bg-slate-400 dark:border-slate-400">
               <iframe width="100%" height="315" loading="lazy" src={data.url} title="YouTube video player" frameborder="0" allowfullscreen></iframe>
