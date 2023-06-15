@@ -41,12 +41,13 @@ const About = () => {
           <h1 className="text-4xl font-bold text-center mt-10 mb-5 text-slate-700 lg:text-5xl lg:text-left dark:text-slate-50">
             Tentang <span className="text-indigo-500">Azhari</span>
           </h1>
-          <div className="w-full h-1 my-10 bg-slate-700"></div>
 
           {/* <p className="mt-3 mb-5 text-base text-slate-500 md:w-96 lg:w-96 dark:text-slate-50">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis doloribus officia soluta reprehenderit amet culpa quidem aspernatur aperiam. Nesciunt dolorem voluptatibus magni, soluta repellendus error voluptatem accusamus enim
             nulla ex ducimus deleniti libero? Placeat aliquam exercitationem dicta perferendis ex possimus?
           </p> */}
+          <div className="w-full h-1 my-10 bg-indigo-500"></div>
+
           <div className=" md:w-96 lg:w-96">
             <table className="text-sm leading-6 dark:text-slate-50 text-slate-500">
               <tbody>
@@ -86,12 +87,14 @@ const About = () => {
               </tbody>
             </table>
           </div>
-          <div className="w-full h-2 mt-5">
+          <div className="w-full h-1 my-10 bg-indigo-500"></div>
+
+          {/* <div className="w-full h-2 mt-5">
             <Link spy={true} smooth={true} offset={50} duration={500} to="history" className="block w-full px-4 py-3 text-center text-white bg-indigo-500 rounded cursor-pointer">
               Riwayat
               <SendOutlinedIcon className="pl-2" />
             </Link>
-          </div>
+          </div> */}
         </motion.div>
       </div>
     </section>

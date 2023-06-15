@@ -6,6 +6,7 @@ import CallOutlinedIcon from "@mui/icons-material/CallOutlined";
 import EmojiEventsOutlinedIcon from "@mui/icons-material/EmojiEventsOutlined";
 import CollectionsOutlinedIcon from "@mui/icons-material/CollectionsOutlined";
 import EmojiObjectsOutlinedIcon from "@mui/icons-material/EmojiObjectsOutlined";
+import MenuBookOutlinedIcon from "@mui/icons-material/MenuBookOutlined";
 import { Link } from "react-scroll";
 import NextLink from "next/link";
 import { motion } from "framer-motion";
@@ -55,8 +56,13 @@ const Navbar = () => {
             </Link>
           </div>
           <div>
-            <Link to="achive" spy={true} smooth={true} offset={50} duration={500} className="cursor-pointer text-slate-500 hover:text-indigo-500 dark:hover:text-indigo-500 dark:text-slate-50">
-              Pencapaian
+            <Link to="award" spy={true} smooth={true} offset={50} duration={500} className="cursor-pointer text-slate-500 hover:text-indigo-500 dark:hover:text-indigo-500 dark:text-slate-50">
+              Penghargaan
+            </Link>
+          </div>
+          <div>
+            <Link to="ilmiah" spy={true} smooth={true} offset={50} duration={500} className="cursor-pointer text-slate-500 hover:text-indigo-500 dark:hover:text-indigo-500 dark:text-slate-50">
+              Ilmiah
             </Link>
           </div>
           <div>
@@ -96,8 +102,11 @@ const Navbar = () => {
       <Link spy={true} smooth={true} offset={50} duration={500} to="about">
         <PersonOutlineOutlinedIcon className="cursor-pointer text-black/75 hover:text-indigo-500 dark:text-slate-50" />
       </Link>
-      <Link spy={true} smooth={true} offset={50} duration={500} to="achive">
+      <Link spy={true} smooth={true} offset={50} duration={500} to="award">
         <EmojiEventsOutlinedIcon className="cursor-pointer text-black/75 hover:text-indigo-500 dark:text-slate-50" />
+      </Link>
+      <Link spy={true} smooth={true} offset={50} duration={500} to="ilmiah">
+        <MenuBookOutlinedIcon className="cursor-pointer text-black/75 hover:text-indigo-500 dark:text-slate-50" />
       </Link>
       <Link spy={true} smooth={true} offset={50} duration={500} to="narasi">
         <EmojiObjectsOutlinedIcon className="cursor-pointer text-black/75 hover:text-indigo-500 dark:text-slate-50" />

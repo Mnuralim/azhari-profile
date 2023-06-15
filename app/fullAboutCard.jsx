@@ -1,9 +1,7 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import { historyWork, organizationHistory, studyHistory } from "@/data/history";
+import React from "react";
 import { motion } from "framer-motion";
 import { galleryContainerVariant, galleryVariant } from "@/utils/motion";
-import axios from "axios";
 
 export const HistoryWork = ({ dataWork }) => {
   return (

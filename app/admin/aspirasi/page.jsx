@@ -16,6 +16,9 @@ import FirstPageIcon from "@mui/icons-material/FirstPage";
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
 import LastPageIcon from "@mui/icons-material/LastPage";
+import axios from "axios";
+import { useRouter } from "next/navigation";
+import { Button } from "@mui/material";
 
 function TablePaginationActions(props) {
   const theme = useTheme();
@@ -66,16 +69,18 @@ const columns = [
   { id: "nama", label: "Nama", minWidth: 170 },
   { id: "desa", label: "Desa/Kelurahan", minWidth: 100 },
   { id: "aspirasi", label: "Aspirasi", minWidth: 100 },
+  { id: "aksi", label: "Aksi", minWidth: 100 },
 ];
 
 export default function CustomPaginationActionsTable() {
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(25);
   const [data, setData] = React.useState([]);
+  const router = useRouter();
 
   React.useEffect(() => {
     const getData = async () => {
-      const res = await fetch("https://colorful-calf-helmet.cyclic.app/get-data");
+      const res = await fetch("https://colorful-calf-helmet.cyclic.app/get-data", { cache: "no-store" });
       const allData = await res.json();
       setData(allData);
     };
@@ -95,6 +100,24 @@ export default function CustomPaginationActionsTable() {
     setPage(0);
   };
 
+  const handelDelete = async (id) => {
+    const confirmed = confirm("Apakah Kamu Yakin Menghapus Ini?");
+    console.log(id);
+    if (confirmed) {
+      const data = await axios.delete(`https://colorful-calf-helmet.cyclic.app/delete-data/${id}`);
+      if (data.status == 200) {
+        alert("Sukses");
+        router.push("/admin/aspirasi");
+      }
+    } else {
+      router.refresh();
+    }
+  };
+
+  const handleRefresh = () => {
+    router.push("/admin/aspirasi");
+  };
+
   return (
     <section className="mt-20 overflow-x-hiddenbg-slate-50 dark:bg-slate-800 dark:text-slate-50 md:mx-10">
       <div>
@@ -103,6 +126,9 @@ export default function CustomPaginationActionsTable() {
         </h1>
       </div>
       <TableContainer>
+        <Button onClick={handleRefresh} className="text-white bg-indigo-500 font-bold hover:bg-indigo-800">
+          Refresh
+        </Button>
         <Table aria-label="custom pagination table">
           <TableHead>
             <TableRow>
@@ -121,6 +147,11 @@ export default function CustomPaginationActionsTable() {
                 </TableCell>
                 <TableCell className="capitalize dark:text-slate-50">{row.address}</TableCell>
                 <TableCell className="capitalize dark:text-slate-50">{row.message}</TableCell>
+                <TableCell className="capitalize dark:text-slate-50 cursor-pointer">
+                  <Button onClick={() => handelDelete(row._id)} className="px-3 py-1 text-white font-bold hover:bg-purple-500 bg-pink-500 cursor-pointer">
+                    Hapus
+                  </Button>
+                </TableCell>
               </TableRow>
             ))}
 

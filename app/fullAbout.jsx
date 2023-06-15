@@ -45,20 +45,20 @@ const FullAbout = () => {
               className={`transition-colors duration-300 ease-linear w-full rounded-xl ${activeTab == "workHistory" ? "bg-indigo-500 text-white" : "bg-transparent"}  text-sm leading-5 font-medium py-3`}
               onClick={() => setActiveTab("workHistory")}
             >
-              Riwayat <span className="block md:inline">Pekerjaan</span>
+              Pekerjaan
             </button>
             <button
               className={`transition-colors duration-300 ease-linear w-full rounded-xl ${activeTab == "organization" ? "bg-indigo-500 text-white" : "bg-transparent"}  text-sm leading-5 font-medium py-3`}
               onClick={() => setActiveTab("organization")}
             >
-              Riwayat <span className="block md:inline">Organisasi</span>
+              Organisasi
             </button>
 
             <button
               className={`transition-colors duration-300 ease-linear w-full rounded-xl ${activeTab == "studyHistory" ? "bg-indigo-500 text-white" : "bg-transparent"}  text-sm leading-5 font-medium py-3`}
               onClick={() => setActiveTab("studyHistory")}
             >
-              Riwayat <span className="block md:inline">Pendidikan</span>
+              Pendidikan
             </button>
           </div>
           {activeTab == "organization" ? (

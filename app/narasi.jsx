@@ -53,7 +53,7 @@ const Narasi = () => {
           {dataNarasi.map((data) => (
             <motion.div key={data._id} variants={galleryVariant} className=" w-full p-2 rounded-xl bg-slate-300/50 dark:bg-slate-700/50 ">
               <div className="overflow-hidden">
-                <img src={data.image} alt={data.title} className="hover:scale-110  transition-all ease-in-out duration-300 " />
+                <img src={data.image} alt={data.title} className="hover:scale-110  transition-all ease-in-out duration-300 w-full h-[344px]" />
               </div>
               <div className="flex gap-4 mt-3 text-sm text-slate-500 dark:text-slate-300">
                 <div>
