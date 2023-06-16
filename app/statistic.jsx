@@ -5,19 +5,15 @@ const Statistic = ({ data }) => {
   const updatedAt = data?.updatedAt;
   const date = new Date(updatedAt);
 
-  // Daftar nama bulan dalam bahasa Indonesia
   const bulan = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
 
-  // Mendapatkan jam dan menit dari objek Date
   const jam = date.getHours();
   const menit = date.getMinutes().toString().padStart(2, "0");
 
-  // Mendapatkan tanggal, bulan, dan tahun dari objek Date
   const tanggal = date.getDate();
   const namaBulan = bulan[date.getMonth()];
   const tahun = date.getFullYear();
 
-  // Menggabungkan jam, menit, tanggal, bulan, dan tahun menjadi format yang diinginkan
   const formattedDate = `jam ${jam}.${menit} WITA, ${tanggal} ${namaBulan} ${tahun}`;
 
   console.log(formattedDate);
