@@ -74,7 +74,7 @@ export const Book = ({ dataBook }) => {
               <div className="overflow-hidden">
                 <img src={data.image} alt={data.title} className="hover:scale-110  transition-all ease-in-out duration-300 w-full h-[450px]" />
               </div>
-              <h2 className="text-lg font-bold text-ellipsis text-slate-700 dark:text-slate-50">{data.title}</h2>
+              <h1 className="text-lg font-bold text-center text-slate-700 dark:text-slate-50">{data.title}</h1>
               <p className="text-base font-semibold text-center text-slate-600 dark:text-slate-300">Tahun {data.year}</p>
             </motion.div>
           ))}
