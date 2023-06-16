@@ -1,6 +1,5 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { narasi } from "@/data/narasi";
 import { motion } from "framer-motion";
 import { galleryContainerVariant, galleryVariant } from "@/utils/motion";
 import axios from "axios";
@@ -14,7 +13,7 @@ export const FullNarasi = ({ isOpen, onClose, data }) => {
     const getAllData = async () => {
       const getData = await axios.get(`https://colorful-calf-helmet.cyclic.app/get-narasi/${data}`);
       setDataNarasi(getData.data);
-      setNarasiArticle(getData.data.article);
+      setNarasiArticle(getData.data?.article);
     };
     getAllData();
   }, []);

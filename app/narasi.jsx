@@ -4,7 +4,6 @@ import PushPinOutlinedIcon from "@mui/icons-material/PushPinOutlined";
 import CalendarMonthOutlinedIcon from "@mui/icons-material/CalendarMonthOutlined";
 import { motion } from "framer-motion";
 import { galleryContainerVariant, galleryVariant } from "@/utils/motion";
-import { narasi } from "@/data/narasi";
 import { FullNarasi } from "./fullNarasi";
 import axios from "axios";
 
@@ -51,7 +50,7 @@ const Narasi = () => {
         <h1 className="mt-10 mb-5 text-4xl font-bold text-center lg:mt-24 lg:text-5xl">Narasi</h1>
         <motion.div variants={galleryContainerVariant} initial="hidden" whileInView="show" className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
           {dataNarasi.map((data) => (
-            <motion.div key={data._id} variants={galleryVariant} className=" w-full p-2 rounded-xl bg-slate-300/50 dark:bg-slate-700/50 ">
+            <motion.div key={data._id} variants={galleryVariant} className="w-full p-2  rounded-xl bg-slate-300/50 dark:bg-slate-700/50">
               <div className="overflow-hidden">
                 <img src={data.image} alt={data.title} className="hover:scale-110  transition-all ease-in-out duration-300 w-full h-[344px]" />
               </div>

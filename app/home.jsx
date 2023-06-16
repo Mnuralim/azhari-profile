@@ -14,10 +14,10 @@ export const HomePage = () => {
   useEffect(() => {
     const getAllData = async () => {
       const getData = await axios.get("https://colorful-calf-helmet.cyclic.app/get-beranda");
-      setDataImage(getData.data[0].image);
-      setDataPosition(getData.data[0].position);
-      setDataName(getData.data[0].name);
-      setDescription(getData.data[0].description);
+      setDataImage(getData.data[0]?.image);
+      setDataPosition(getData.data[0]?.position);
+      setDataName(getData.data[0]?.name);
+      setDescription(getData.data[0]?.description);
     };
     getAllData();
   }, []);

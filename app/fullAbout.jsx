@@ -12,7 +12,7 @@ const FullAbout = () => {
   useEffect(() => {
     const getAllData = async () => {
       const getData = await axios.get("https://colorful-calf-helmet.cyclic.app/get-workhistory");
-      setDataWork(getData.data);
+      setDataWork(getData?.data);
     };
     getAllData();
   }, []);
@@ -20,7 +20,7 @@ const FullAbout = () => {
   useEffect(() => {
     const getAllData = async () => {
       const getData = await axios.get("https://colorful-calf-helmet.cyclic.app/get-study");
-      setDataStudy(getData.data);
+      setDataStudy(getData?.data);
     };
     getAllData();
   }, []);
@@ -28,7 +28,7 @@ const FullAbout = () => {
   useEffect(() => {
     const getAllData = async () => {
       const getData = await axios.get("https://colorful-calf-helmet.cyclic.app/get-organization");
-      setDataOrganization(getData.data);
+      setDataOrganization(getData?.data);
     };
     getAllData();
   }, []);

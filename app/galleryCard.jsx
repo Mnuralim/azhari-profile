@@ -2,7 +2,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { galleryContainerVariant, galleryVariant } from "@/utils/motion";
-import { galleryPhoto, galleryVideo } from "@/data/gallery";
 
 export const GalleryCardPhoto = ({ photo }) => {
   return (

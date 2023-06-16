@@ -1,9 +1,48 @@
 "use client";
-import React, { useState } from "react";
-import { IlmiahTabel, PenghargaanTabel } from "./PencapaianTabel";
+import React, { useState, useEffect } from "react";
+import { Book, IlmiahTabel, PenghargaanTabel } from "./PencapaianTabel";
+import { useRouter } from "next/navigation";
 
 const Pencapaian = () => {
   const [activeTab, setActiveTab] = useState("penghargaan");
+  const [book, setBook] = useState([]);
+  const [ilmiah, setIlmiah] = useState([]);
+  const [achiev, setAchiev] = useState([]);
+  const router = useRouter();
+
+  useEffect(() => {
+    const getData = async () => {
+      const res = await fetch("https://colorful-calf-helmet.cyclic.app/get-book", {
+        cache: "no-store",
+      });
+      const allData = await res.json();
+      setBook(allData);
+    };
+    getData();
+  }, []);
+
+  useEffect(() => {
+    const getData = async () => {
+      const res = await fetch("https://colorful-calf-helmet.cyclic.app/get-ilmiah", {
+        cache: "no-store",
+      });
+      const allData = await res.json();
+      setIlmiah(allData);
+    };
+    getData();
+  }, []);
+
+  useEffect(() => {
+    const getData = async () => {
+      const res = await fetch("https://colorful-calf-helmet.cyclic.app/get-achiev", {
+        cache: "no-store",
+      });
+      const allData = await res.json();
+      setAchiev(allData);
+    };
+    getData();
+  }, []);
+
   return (
     <>
       <section id="achive" className="relative flex min-h-screen p-5 mt-10 lg:mt-5">
@@ -28,7 +67,7 @@ const Pencapaian = () => {
               Buku <span className="block md:inline"></span>
             </button>
           </div>
-          {activeTab == "penghargaan" ? <PenghargaanTabel /> : activeTab == "ilmiah" ? <IlmiahTabel /> : ""}
+          {activeTab == "penghargaan" ? <PenghargaanTabel achiev={achiev} /> : activeTab == "ilmiah" ? <IlmiahTabel ilmiah={ilmiah} /> : <Book dataBook={book} />}
         </div>
       </section>
     </>

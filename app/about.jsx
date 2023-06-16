@@ -2,8 +2,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { slideIn } from "@/utils/motion";
-import { Link } from "react-scroll";
-import SendOutlinedIcon from "@mui/icons-material/SendOutlined";
 import axios from "axios";
 
 const About = () => {
@@ -19,14 +17,14 @@ const About = () => {
   useEffect(() => {
     const getAllData = async () => {
       const getData = await axios.get("https://colorful-calf-helmet.cyclic.app/get-about");
-      setName(getData.data[0].name);
-      setBirth(getData.data[0].birt);
-      setWife(getData.data[0].wifeName);
-      setFirstchild(getData.data[0].firstchild);
-      setSecondchild(getData.data[0].secondchild);
-      setThirdchild(getData.data[0].thirdchild);
-      setFourthchild(getData.data[0].fourthchild);
-      setImageAbout(getData.data[0].images);
+      setName(getData.data[0]?.name);
+      setBirth(getData.data[0]?.birt);
+      setWife(getData.data[0]?.wifeName);
+      setFirstchild(getData.data[0]?.firstchild);
+      setSecondchild(getData.data[0]?.secondchild);
+      setThirdchild(getData.data[0]?.thirdchild);
+      setFourthchild(getData.data[0]?.fourthchild);
+      setImageAbout(getData.data[0]?.images);
     };
     getAllData();
   }, []);
@@ -38,7 +36,7 @@ const About = () => {
           <img src={imageAbout} className="w-full h-full mx-auto my-auto rounded-b-full" />
         </motion.div>
         <motion.div variants={slideIn("right", "tween", 0.5, 1.5)} initial="hidden" whileInView="show">
-          <h1 className="text-4xl font-bold text-center mt-10 mb-5 text-slate-700 lg:text-5xl lg:text-left dark:text-slate-50">
+          <h1 className="mt-10 mb-5 text-4xl font-bold text-center text-slate-700 lg:text-5xl lg:text-left dark:text-slate-50">
             Tentang <span className="text-indigo-500">Azhari</span>
           </h1>
 
