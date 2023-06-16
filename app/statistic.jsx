@@ -10,7 +10,7 @@ const Statistic = ({ data }) => {
 
   // Mendapatkan jam dan menit dari objek Date
   const jam = date.getHours();
-  const menit = date.getMinutes();
+  const menit = date.getMinutes().toString().padStart(2, "0");
 
   // Mendapatkan tanggal, bulan, dan tahun dari objek Date
   const tanggal = date.getDate();
