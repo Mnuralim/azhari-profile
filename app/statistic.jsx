@@ -19,7 +19,7 @@ const Statistic = ({ data }) => {
   console.log(formattedDate);
 
   return (
-    <section id="award" className="relative flex items-center px-10 lg:px-24">
+    <section className="relative flex items-center px-10 lg:px-24">
       <div className="flex items-center justify-start w-full">
         <div>
           <div>
