@@ -69,6 +69,13 @@ const Admin = () => {
                     <Link href={"/admin/aspirasi"}>Lihat</Link>
                   </td>
                 </tr>
+                <tr>
+                  <td className="py-2 text-center border border-slate-700 dark:border-slate-50">8</td>
+                  <td className="px-2 py-2 text-center border border-slate-700 dark:border-slate-50">Komunitas</td>
+                  <td className="px-3 py-2 text-center border border-slate-700 dark:border-slate-50">
+                    <Link href={"/admin/komunitas"}>Lihat</Link>
+                  </td>
+                </tr>
               </tbody>
             </table>
           </div>

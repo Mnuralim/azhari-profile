@@ -24,7 +24,7 @@ const Theme = () => {
   }, []);
 
   return screenSize <= 1024 ? (
-    <div className={`fixed  z-[99999] flex justify-center items-center text-center bottom-1/3 transition-all ${showTheme == false ? "-left-20" : "left-0"}`}>
+    <div className={`fixed  z-[99999] flex justify-center items-center text-center bottom-2/3 transition-all ${showTheme == false ? "-left-20" : "left-0"}`}>
       <div className="flex flex-col items-center justify-center w-20 h-20 gap-3 rounded-r-xl bg-white/60 backdrop-blur-md dark:bg-slate-700/60">
         <h1 className="text-base font-semibold">Tema</h1>
         <ButtonDark />

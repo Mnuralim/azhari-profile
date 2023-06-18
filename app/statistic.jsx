@@ -16,8 +16,6 @@ const Statistic = ({ data }) => {
 
   const formattedDate = `jam ${jam}.${menit} WITA, ${tanggal} ${namaBulan} ${tahun}`;
 
-  console.log(formattedDate);
-
   return (
     <section className="relative flex items-center px-10 lg:px-24">
       <div className="flex items-center justify-start w-full">

@@ -29,7 +29,7 @@ const Achievement = () => {
     <>
       <section id="award" className="relative flex items-center min-h-screen p-5 mt-10 lg:mt-20">
         <div className="w-full">
-          <h1 className="mb-5 text-4xl font-bold text-center mt-14 text-indigo-500 lg:text-5xl ">
+          <h1 className="mb-5 text-4xl font-bold text-center mt-14 text-slate-50 lg:text-5xl ">
             Penghargaan
             {/* <span className="text-indigo-500">Azhari</span> */}
           </h1>

@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { slideIn } from "@/utils/motion";
 import axios from "axios";
+import SendOutlinedIcon from "@mui/icons-material/SendOutlined";
+import { JoinForm } from "./communityForm";
 
 export const HomePage = () => {
   const [screenSize, setScreenSize] = useState(0);
@@ -10,6 +12,7 @@ export const HomePage = () => {
   const [dataPosition, setDataPosition] = useState("");
   const [dataName, setDataName] = useState("");
   const [description, setDescription] = useState("");
+  const [showJoin, setShowJoin] = useState(false);
 
   useEffect(() => {
     const getAllData = async () => {
@@ -42,6 +45,23 @@ export const HomePage = () => {
       };
     }
   }, []);
+
+  useEffect(() => {
+    const handleBodyOverflow = () => {
+      document.body.style.overflow = showJoin ? "hidden" : "auto";
+    };
+
+    handleBodyOverflow();
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [showJoin]);
+
+  const handleClose = () => {
+    setShowJoin(false);
+  };
+
   return (
     <section id="home" className="relative p-5 lg:px-16">
       <div className="relative z-50 flex flex-col items-center justify-center h-screen md:gap-5 lg:flex-row-reverse lg:gap-48">
@@ -55,14 +75,15 @@ export const HomePage = () => {
           </h1>
           <h2 className="mt-4 text-xl font-medium text-slate-600 dark:text-slate-400">{dataPosition}</h2>
           <p className="mt-3 mb-5 text-lg leading-10 text-slate-500 lg:w-96 dark:text-slate-50">" {description} "</p>
-          {/* <div>
-            <Link href={"#"} className="px-4 py-3 text-white bg-indigo-500 rounded ">
+          <div>
+            <button onClick={() => setShowJoin(!showJoin)} className="px-4 py-3 text-white bg-indigo-500 rounded ">
               <SendOutlinedIcon className="mr-2" />
-              Hubungi Saya
-            </Link>
-          </div> */}
+              Gabung
+            </button>
+          </div>
         </motion.div>
       </div>
+      <JoinForm isShow={showJoin} onClosed={handleClose} />
     </section>
   );
 };
