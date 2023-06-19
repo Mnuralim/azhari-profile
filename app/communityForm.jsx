@@ -16,6 +16,7 @@ export const JoinForm = ({ isShow, onClosed }) => {
   const [name, setName] = useState("");
   const [address, setAddress] = useState("");
   const [mobile, setMobile] = useState("");
+  const [age, setAge] = useState("");
   const [alert, setAlert] = useState("");
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -46,6 +47,7 @@ export const JoinForm = ({ isShow, onClosed }) => {
         name: name.toLowerCase(),
         address: address.toLowerCase(),
         mobile: mobile.toLowerCase(),
+        age: age.toLowerCase(),
       });
       if (response.status == 200) {
         setLoading(false);
@@ -54,6 +56,7 @@ export const JoinForm = ({ isShow, onClosed }) => {
         setName("");
         setAddress("");
         setMobile("");
+        setAge("");
         setTimeout(() => {
           onClosed();
         }, 2000);
@@ -79,6 +82,20 @@ export const JoinForm = ({ isShow, onClosed }) => {
                 id="name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
+                required
+              />
+            </div>
+            <div className="w-full">
+              <label className="text-slate-500 md:text-lg dark:text-slate-200" htmlFor="age">
+                Umur :
+              </label>
+              <input
+                className="block w-full px-2 py-1 mt-2 text-sm rounded-md outline-none bg-slate-100 md:text-base dark:bg-slate-500"
+                type="text"
+                placeholder="Umur"
+                id="age"
+                value={age}
+                onChange={(e) => setAge(e.target.value)}
                 required
               />
             </div>
