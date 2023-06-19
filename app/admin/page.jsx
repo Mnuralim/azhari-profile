@@ -1,8 +1,13 @@
 "use client";
 import React from "react";
 import Link from "next/link";
+import { useSession } from "next-auth/react";
+import { usePathname } from "next/navigation";
 
 const Admin = () => {
+  const path = usePathname();
+  const session = useSession();
+
   return (
     <>
       <section className="relative flex min-h-screen p-5 mt-10 lg:mt-20">

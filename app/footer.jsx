@@ -29,6 +29,12 @@ const Footer = () => {
               <Link spy={true} smooth={true} offset={50} duration={500} to="about" className="cursor-pointer text-slate-500 hover:text-indigo-500 dark:hover:text-indigo-500 dark:text-slate-50">
                 Tentang
               </Link>
+              <Link to="award" spy={true} smooth={true} offset={50} duration={500} className="cursor-pointer text-slate-500 hover:text-indigo-500 dark:hover:text-indigo-500 dark:text-slate-50">
+                Penghargaan
+              </Link>
+              <Link to="ilmiah" spy={true} smooth={true} offset={50} duration={500} className="cursor-pointer text-slate-500 hover:text-indigo-500 dark:hover:text-indigo-500 dark:text-slate-50">
+                Ilmiah
+              </Link>
               <Link spy={true} smooth={true} offset={50} duration={500} to="narasi" className="cursor-pointer text-slate-500 hover:text-indigo-500 dark:hover:text-indigo-500 dark:text-slate-50">
                 Narasi
               </Link>
@@ -37,9 +43,6 @@ const Footer = () => {
               </Link>
               <Link spy={true} smooth={true} offset={50} duration={500} to="contact" className="cursor-pointer text-slate-500 hover:text-indigo-500 dark:hover:text-indigo-500 dark:text-slate-50">
                 Aspirasi
-              </Link>
-              <Link to="contact" className="cursor-pointer text-slate-500 hover:text-indigo-500 dark:hover:text-indigo-500 dark:text-slate-50">
-                Komunitas
               </Link>
             </div>
           </div>

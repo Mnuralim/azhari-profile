@@ -77,6 +77,7 @@ export default function CustomPaginationActionsTable() {
   const [rowsPerPage, setRowsPerPage] = React.useState(25);
   const [data, setData] = React.useState([]);
   const router = useRouter();
+  console.log(router);
 
   React.useEffect(() => {
     const getData = async () => {
