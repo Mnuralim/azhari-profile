@@ -67,6 +67,7 @@ TablePaginationActions.propTypes = {
 
 const columns = [
   { id: "nama", label: "Nama", minWidth: 170 },
+  { id: "umur", label: "Umur", minWidth: 30 },
   { id: "desa", label: "Desa/Kelurahan", minWidth: 100 },
   { id: "nomor handphone", label: "Nomor Handphone", minWidth: 100 },
   { id: "aksi", label: "Aksi", minWidth: 100 },
@@ -145,6 +146,9 @@ export default function CustomPaginationActionsTable() {
               <TableRow key={row._id}>
                 <TableCell className="capitalize dark:text-slate-50" component="th" scope="row">
                   {row.name}
+                </TableCell>
+                <TableCell className="capitalize dark:text-slate-50" component="th" scope="row">
+                  {row?.age} Tahun
                 </TableCell>
                 <TableCell className="capitalize dark:text-slate-50">{row.address}</TableCell>
                 <TableCell className="capitalize dark:text-slate-50">{row.mobile}</TableCell>

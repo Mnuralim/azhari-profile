@@ -91,7 +91,7 @@ export const JoinForm = ({ isShow, onClosed }) => {
               </label>
               <input
                 className="block w-full px-2 py-1 mt-2 text-sm rounded-md outline-none bg-slate-100 md:text-base dark:bg-slate-500"
-                type="text"
+                type="number"
                 placeholder="Umur"
                 id="age"
                 value={age}

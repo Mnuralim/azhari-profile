@@ -12,10 +12,8 @@ export default NextAuth({
         try {
           const { email, password } = credentials;
           const user = await axios.post(`https://colorful-calf-helmet.cyclic.app/login-admin`, { email, password });
-          console.log(user);
           return user.data.data;
         } catch (error) {
-          console.log(error);
           throw new Error(error);
         }
       },
