@@ -94,7 +94,7 @@ const Login = () => {
               />
             </div>
             <div className="w-full mt-5">
-              <button type="submit" className="w-full py-3 text-white bg-indigo-500 rounded px- ">
+              <button type="submit" className="w-full py-1 text-white bg-indigo-500 rounded px- ">
                 <SendOutlinedIcon className="pr-2" />
                 {loading ? "Masuk..." : "Masuk"}
               </button>
