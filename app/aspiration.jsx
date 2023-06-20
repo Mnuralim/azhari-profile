@@ -70,15 +70,15 @@ const Aspiration = () => {
         <div className="flex flex-col items-center justify-center mt-10 lg:flex-row lg:gap-10">
           <motion.div variants={slideIn("left", "tween", 0.5, 1)} initial="hidden" whileInView="show" className="flex flex-col items-center justify-center w-11/12 p-10 bg-white shadow-md rounded-xl lg:w-2/6 dark:bg-slate-700">
             <motion.div className="flex flex-col justify-center gap-5">
-              <div className="flex gap-4">
+              {/* <div className="flex gap-4">
                 <div>
                   <CallOutlinedIcon className="text-indigo-400" />
                 </div>
                 <div>
-                  {/* <h1 className="font-medium text-slate-600 md:text-lg dark:text-slate-50 ">Telepon</h1>
-                  <p className="text-sm text-slate-500 dark:text-slate-400">+62-858-6525-7441</p> */}
+                  <h1 className="font-medium text-slate-600 md:text-lg dark:text-slate-50 ">Telepon</h1>
+                  <p className="text-sm text-slate-500 dark:text-slate-400">+62-858-6525-7441</p>
                 </div>
-              </div>
+              </div> */}
               <div className="flex gap-4">
                 <div>
                   <EmailOutlinedIcon className="text-indigo-400" />
