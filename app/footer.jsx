@@ -51,7 +51,7 @@ const Footer = () => {
             <div className="flex flex-col gap-2 text-sm text-slate-500 md:text-base dark:text-slate-300">
               <p className="cursor-pointer hover:text-indigo-500">Mawasangka - Buton Tengah</p>
               <p className="cursor-pointer hover:text-indigo-500">Sulawesi Tenggara - Indonesia</p>
-              <p className="cursor-pointer hover:text-indigo-500">+62-858-6525-7441</p>
+              {/* <p className="cursor-pointer hover:text-indigo-500">086</p> */}
               <p className="cursor-pointer hover:text-indigo-500">azhari@gmail.com</p>
             </div>
           </div>
