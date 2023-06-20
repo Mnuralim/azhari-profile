@@ -75,8 +75,8 @@ const Aspiration = () => {
                   <CallOutlinedIcon className="text-indigo-400" />
                 </div>
                 <div>
-                  <h1 className="font-medium text-slate-600 md:text-lg dark:text-slate-50 ">Telepon</h1>
-                  <p className="text-sm text-slate-500 dark:text-slate-400">+62-858-6525-7441</p>
+                  {/* <h1 className="font-medium text-slate-600 md:text-lg dark:text-slate-50 ">Telepon</h1>
+                  <p className="text-sm text-slate-500 dark:text-slate-400">+62-858-6525-7441</p> */}
                 </div>
               </div>
               <div className="flex gap-4">
