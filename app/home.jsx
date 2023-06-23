@@ -5,6 +5,8 @@ import { slideIn } from "@/utils/motion";
 import axios from "axios";
 import SendOutlinedIcon from "@mui/icons-material/SendOutlined";
 import { JoinForm } from "./communityForm";
+import NextLink from "next/link";
+import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
 
 export const HomePage = () => {
   const [screenSize, setScreenSize] = useState(0);
@@ -74,7 +76,12 @@ export const HomePage = () => {
             <span className="text-indigo-500">{secondPart}</span>
           </h1>
           <h2 className="mt-4 text-xl font-medium text-slate-600 dark:text-slate-400">{dataPosition}</h2>
-          <p className="mt-3 mb-5 text-lg leading-10 text-slate-500 lg:w-96 dark:text-slate-50">" {description} "</p>
+          <p className="mt-3 mb-3 text-lg leading-10 text-slate-500 lg:w-96 dark:text-slate-50">" {description} "</p>
+          <div className="flex justify-center mb-4 md:justify-start">
+            <NextLink href={"https://www.facebook.com/zaqih.zaqih.33"} target="blank">
+              <FacebookRoundedIcon className="text-slate-500" fontSize="large" />
+            </NextLink>
+          </div>
           <div>
             <button onClick={() => setShowJoin(!showJoin)} className="px-4 py-3 text-white bg-indigo-500 rounded ">
               <SendOutlinedIcon className="mr-2" />
